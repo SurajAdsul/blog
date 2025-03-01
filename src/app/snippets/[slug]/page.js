@@ -4,8 +4,10 @@ import { getMarkdownContent } from '@/utils/markdown';
 import { MarkdownContent } from '@/utils/markdown';
 import '@/styles/markdown.css';
 
-export default function SnippetPost({ params }) {
-  const snippetPath = path.join(process.cwd(), 'content/snippets', `${params.slug}.md`);
+export default async function SnippetPost({ params }) {
+  const resolvedParams = await params; // Await the params object
+  const slug = resolvedParams.slug; // Now access slug safely
+  const snippetPath = path.join(process.cwd(), 'content/snippets', `${slug}.md`);
   const { frontmatter, content } = getMarkdownContent(snippetPath);
 
   if (!frontmatter) {

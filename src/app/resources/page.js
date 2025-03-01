@@ -1,56 +1,4 @@
-const resources = {
-  "Development": [
-    {
-      link: "https://nextjs.org",
-      title: "Next.js",
-      description: "The React Framework for Production",
-    },
-    {
-      link: "https://tailwindcss.com",
-      title: "Tailwind CSS",
-      description: "A utility-first CSS framework",
-    },
-    {
-      link: "https://typescript.org",
-      title: "TypeScript",
-      description: "JavaScript with syntax for types",
-    },
-  ],
-  "Design": [
-    {
-      link: "https://figma.com",
-      title: "Figma",
-      description: "Collaborative interface design tool",
-    },
-    {
-      link: "https://coolors.co",
-      title: "Coolors",
-      description: "Color schemes generator",
-    },
-    {
-      link: "https://dribbble.com",
-      title: "Dribbble",
-      description: "Design inspiration platform",
-    },
-  ],
-  "Learning": [
-    {
-      link: "https://egghead.io",
-      title: "Egghead",
-      description: "Concise screencasts for web developers",
-    },
-    {
-      link: "https://frontendmasters.com",
-      title: "Frontend Masters",
-      description: "Advanced web development training",
-    },
-    {
-      link: "https://udemy.com",
-      title: "Udemy",
-      description: "Online learning marketplace",
-    },
-  ],
-};
+import { resources } from '../../../content/resources/data';
 
 export default function ResourcesPage() {
   return (
@@ -83,7 +31,7 @@ export default function ResourcesPage() {
                         className="group relative flex flex-col items-start rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition"
                       >
                         <span className="relative z-10 text-sm font-medium text-teal-500 group-hover:text-teal-600 dark:text-teal-400 dark:group-hover:text-teal-300">
-                          {new URL(resource.link).hostname.replace('www.', '')}
+                          {resource.hostname}
                         </span>
                         <h3 className="mt-2 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                           {resource.title}
