@@ -1,4 +1,4 @@
-import { getMarkdownContent } from '@/utils/markdown';
+import { getMarkdownContent, MarkdownContent } from '@/utils/markdown';
 import path from 'path';
 import Link from 'next/link';
 import '@/styles/markdown.css';
@@ -64,10 +64,9 @@ export default function BlogPost({ params }) {
                     )}
                     <h1 className="mb-2 !mt-0">{frontmatter.title}</h1>
                   </header>
-                  <div 
-                    dangerouslySetInnerHTML={{ __html: content }}
-                    className="markdown-content"
-                  />
+                  <div className="markdown-content">
+                    <MarkdownContent content={content} />
+                  </div>
                 </article>
               </div>
             </div>

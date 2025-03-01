@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export function getMarkdownContent(filePath) {
   // Read the markdown file
@@ -11,15 +12,41 @@ export function getMarkdownContent(filePath) {
   // Parse the frontmatter and content
   const { data: frontmatter, content: markdownContent } = matter(fileContents);
   
-  // Convert markdown to HTML
-  const processedContent = remark()
-    .use(html)
-    .processSync(markdownContent);
-  
   return {
     frontmatter,
-    content: processedContent.toString(),
+    content: markdownContent,
   };
+}
+
+// Component for rendering markdown with syntax highlighting
+export function MarkdownContent({ content }) {
+  return (
+    <ReactMarkdown
+      components={{
+        code({ node, inline, className, children, ...props }) {
+          const match = /language-(\w+)/.exec(className || '');
+          const language = match ? match[1] : '';
+          
+          return !inline && language ? (
+            <SyntaxHighlighter
+              style={oneDark}
+              language={language}
+              PreTag="div"
+              {...props}
+            >
+              {String(children).replace(/\n$/, '')}
+            </SyntaxHighlighter>
+          ) : (
+            <code className={className} {...props}>
+              {children}
+            </code>
+          );
+        }
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  );
 }
 
 export function getAllMarkdownFiles(directory) {
