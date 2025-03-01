@@ -37,40 +37,47 @@
 
 /* Typography overrides */
 .prose h1 {
-  font-size: 2.25rem;
+  font-size: 2.25rem; /* text-4xl */
   line-height: 2.5rem;
   margin-top: 0;
+  font-weight: 700; /* font-bold */
+  letter-spacing: -0.025em; /* tracking-tight */
+  color: rgb(39 39 42); /* text-zinc-800 */
 }
 
 @media (min-width: 640px) {
   .prose h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* text-5xl */
     line-height: 3.5rem;
   }
 }
 
 .prose h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 640px) {
   .prose h2 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
   }
 }
 
 .prose p {
-  font-size: 1rem;
+  font-size: 1rem; /* text-base */
   line-height: 1.75;
   margin-top: 1.5rem;
+  color: rgb(82 82 91); /* text-zinc-600 */
 }
 
-@media (min-width: 640px) {
+@media (prefers-color-scheme: dark) {
   .prose p {
-    font-size: 1.125rem;
+    color: rgb(161 161 170); /* dark:text-zinc-400 */
+  }
+  .prose h1 {
+    color: rgb(244 244 245); /* dark:text-zinc-100 */
   }
 } 
