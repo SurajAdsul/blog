@@ -7,8 +7,8 @@ export default function Navbar() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    // Only check localStorage theme on component mount
-    const isLight = localStorage.theme === 'light';
+    // Check if dark mode is active
+    const isLight = document.documentElement.classList.contains('dark') === false;
     setIsDark(!isLight);
   }, []);
 
