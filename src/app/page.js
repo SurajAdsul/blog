@@ -17,18 +17,6 @@ export default function Home() {
       date: "March 10, 2024",
       description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
     },
-    {
-      title: "Understanding TypeScript Generics",
-      slug: "typescript-generics-guide",
-      date: "March 10, 2024",
-      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
-    },
-    {
-      title: "Understanding TypeScript Generics",
-      slug: "typescript-generics-guide",
-      date: "March 10, 2024",
-      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
-    },
   ];
 
   const workProjects = [
