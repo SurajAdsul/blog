@@ -61,8 +61,7 @@ export default function SnippetsPage() {
                 Code snippets for developers
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                A collection of code snippets for various use cases in web development. 
-                From authentication to performance optimization, find the code you need.
+              A handy collection of code snippets for web development, find the code you need.
               </p>
             </header>
 

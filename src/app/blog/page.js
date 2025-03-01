@@ -13,10 +13,10 @@ export default function Blog() {
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <header className="max-w-full">
               <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                Writing on software development, company building, and marketing.
+                Sharing insights on software development, and the Tech That Excites Me.
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                All of my long-form thoughts on coding, leadership, product development, and more, collected in chronological order.
+              All my in-depth thoughts on coding, Engineering Practices, product development, and more—collected and shared in the order they unfold.
               </p>
             </header>
 
