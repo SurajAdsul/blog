@@ -48,11 +48,8 @@ export default function ProfileHeader() {
       </div>
 
       <div className="relative flex-shrink-1 p-4 md:p-4 md:order-last order-first">
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block z-[5] overflow-hidden rounded shadow-xl ring-1 ring-slate-900/5 relative bg-white h-20 w-20"
+        <div
+          className="block z-[5] overflow-hidden rounded-sm shadow-xl ring-1 ring-slate-900/5 relative bg-white h-40 w-40"
         >
           <div className="relative w-full h-full">
             <Image
@@ -63,7 +60,7 @@ export default function ProfileHeader() {
               sizes="(max-width: 768px) 100vw, 80px"
             />
           </div>
-        </a>
+        </div>
         
         {/* Decorative elements */}
         <div className="z-0">

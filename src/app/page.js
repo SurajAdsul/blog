@@ -1,10 +1,8 @@
-import Image from "next/image";
-import ProfileHeader from "./components/ProfileHeader";
-import WorkSection from "./components/WorkSection";
-import BlogPost from "./components/BlogPost";
 import { getAllMarkdownFiles } from '@/utils/markdown';
 import Link from 'next/link';
 import path from 'path';
+import ProfileHeader from "./components/ProfileHeader";
+import WorkSection from "./components/WorkSection";
 
 export default function Home() {
   // Get all blog posts from the content/blog directory
