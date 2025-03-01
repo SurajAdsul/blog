@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaStackOverflow, FaTwitter } from 'react-icons/fa';
 
 export default function ProfileHeader() {
   return (
@@ -31,20 +32,46 @@ export default function ProfileHeader() {
             {' '}cool things
           </span>
         </div> */}
-        <p className="text-zinc-600 dark:text-zinc-400">
+        <p className="text-zinc-600 dark:text-zinc-400 mb-4">
         Full Stack Developer passionate about building web applications and exploring new technologies. 
         I love solving complex problems and sharing insights from my journey.
-        Find me on{' '}
+        </p>
+        
+        {/* Social Icons */}
+        <div className="flex space-x-4">
           <a
-            href="https://twitter.com/surajadsul"
-            className="font-bold group dark:text-zinc-400 font-inter relative inline-flex overflow-hidden"
+            href="https://github.com/surajadsul"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
           >
-            <span className="relative">twitter</span>
+            <FaGithub className="h-5 w-5" />
           </a>
-          {' '}for updates, tech discussions, and more!
-        </p>
+          <a
+            href="https://linkedin.com/in/surajadsul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          >
+            <FaLinkedin className="h-5 w-5" />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/5413785/suraj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          >
+            <FaStackOverflow className="h-5 w-5" />
+          </a>
+          <a
+            href="https://twitter.com/surajadsul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          >
+            <FaTwitter className="h-5 w-5" />
+          </a>
+        </div>
       </div>
 
       <div className="relative flex-shrink-1 p-4 md:p-4 md:order-last order-first">
