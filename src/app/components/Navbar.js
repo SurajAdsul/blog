@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,8 +34,20 @@ export default function Navbar() {
     <nav className="py-4">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* Spacer for left side */}
-          <div className="w-10 sm:w-20">
+          {/* Profile Photo and Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <Link 
+              href="/"
+              className="block overflow-hidden rounded-full w-8 h-8 ring-1 ring-zinc-900/5 dark:ring-white/10"
+            >
+              <Image
+                src="/profile.jpeg"
+                alt="Profile"
+                width={32}
+                height={32}
+                className="object-cover"
+              />
+            </Link>
             <button
               onClick={toggleMenu}
               className="sm:hidden text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none"
