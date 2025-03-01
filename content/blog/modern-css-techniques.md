@@ -5,8 +5,6 @@ description: "Explore modern CSS features and techniques that can enhance your w
 tags: ["css", "web-design", "frontend"]
 ---
 
-# Modern CSS Techniques for Better Web Design
-
 CSS has evolved significantly in recent years. Let's explore some modern techniques that can improve your web development workflow.
 
 ## CSS Custom Properties (Variables)

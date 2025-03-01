@@ -1,0 +1,55 @@
+/* Base markdown content styles */
+.markdown-content {
+  width: 100%;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Typography overrides */
+.prose h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-top: 0;
+}
+
+@media (min-width: 640px) {
+  .prose h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .prose h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.prose p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .prose p {
+    font-size: 1.125rem;
+  }
+} 

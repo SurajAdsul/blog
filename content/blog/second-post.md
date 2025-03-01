@@ -5,8 +5,6 @@ description: "Next.js is a powerful React framework that makes it easy to build 
 tags: ['nextjs', 'markdown', 'tutorial']
 ---
 
-# Getting Started with Next.js and Markdown
-
 Next.js is a powerful React framework that makes it easy to build static and server-rendered applications. In this post, we'll explore how to create a blog using Next.js and Markdown.
 
 ## Why Markdown?

@@ -5,8 +5,6 @@ description: "An in-depth look at different data fetching patterns in Next.js 14
 tags: ["nextjs", "react", "performance", "server-components"]
 ---
 
-# Data Fetching Patterns in Next.js 14
-
 Next.js 14 introduces powerful data fetching capabilities that leverage React's Server Components. Let's explore the different patterns and when to use each one.
 
 ## Server Components

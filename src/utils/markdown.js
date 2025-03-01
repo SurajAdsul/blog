@@ -1,27 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import MarkdownIt from 'markdown-it';
-
-const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  typographer: true
-});
+import { remark } from 'remark';
+import html from 'remark-html';
 
 export function getMarkdownContent(filePath) {
   // Read the markdown file
   const fileContents = fs.readFileSync(filePath, 'utf8');
   
   // Parse the frontmatter and content
-  const { data, content } = matter(fileContents);
+  const { data: frontmatter, content: markdownContent } = matter(fileContents);
   
   // Convert markdown to HTML
-  const htmlContent = md.render(content);
+  const processedContent = remark()
+    .use(html)
+    .processSync(markdownContent);
   
   return {
-    frontmatter: data,
-    content: htmlContent
+    frontmatter,
+    content: processedContent.toString(),
   };
 }
 

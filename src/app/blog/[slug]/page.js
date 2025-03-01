@@ -1,6 +1,18 @@
 import { getMarkdownContent } from '@/utils/markdown';
 import path from 'path';
 import Link from 'next/link';
+import '@/styles/markdown.css';
+
+// Add metadata export for better SEO
+export async function generateMetadata({ params }) {
+  const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
+  const { frontmatter } = getMarkdownContent(filePath);
+  
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description || '',
+  };
+}
 
 export default function BlogPost({ params }) {
   const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
@@ -33,9 +45,29 @@ export default function BlogPost({ params }) {
                   </svg>
                 </Link>
 
-                <article className="prose lg:prose-xl mx-auto px-4">
-                  <h1>{frontmatter.title}</h1>
-                  <div dangerouslySetInnerHTML={{ __html: content }} />
+                <article className="prose prose-zinc dark:prose-invert lg:prose-xl mx-auto px-4 prose-headings:font-medium prose-p:leading-relaxed">
+                  <header className="mb-8">
+                    {frontmatter.date && (
+                      <time 
+                        dateTime={frontmatter.date} 
+                        className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+                      >
+                        <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+                        <span className="ml-3">
+                          {new Date(frontmatter.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          })}
+                        </span>
+                      </time>
+                    )}
+                    <h1 className="mb-2 !mt-0">{frontmatter.title}</h1>
+                  </header>
+                  <div 
+                    dangerouslySetInnerHTML={{ __html: content }}
+                    className="markdown-content"
+                  />
                 </article>
               </div>
             </div>
