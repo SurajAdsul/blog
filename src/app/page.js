@@ -12,19 +12,6 @@ export default function Home() {
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3); // Get only the 3 most recent posts
 
-  const workProjects = [
-    {
-      title: "Project One",
-      description: "A web application built with Next.js and TypeScript",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      title: "Project Two",
-      description: "Real-time chat application using WebSocket",
-      tech: ["React", "Node.js", "Socket.io"],
-    },
-  ];
-
   return (
     <div className="sm:px-8 mt-16 sm:mt-18">
       <div className="mx-auto max-w-7xl lg:px-8">

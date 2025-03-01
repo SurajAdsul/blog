@@ -2,50 +2,6 @@ import { getMarkdownContent } from '@/utils/markdown';
 import path from 'path';
 import Link from 'next/link';
 
-const blogPosts = {
-  'modern-web-application-nextjs': {
-    title: 'Building a Modern Web Application with Next.js',
-    date: 'March 15, 2024',
-    content: `
-      Next.js has revolutionized the way we build web applications. In this comprehensive guide, 
-      we'll explore how to build a modern web application using Next.js and Tailwind CSS.
-      
-      We'll cover everything from setting up your development environment to deploying your 
-      application to production. You'll learn about the latest features, best practices, 
-      and performance optimizations.
-
-      Topics covered:
-      - App Router vs Pages Router
-      - Server Components vs Client Components
-      - Data Fetching Strategies
-      - Route Handlers and API Routes
-      - Optimizing Images and Fonts
-      - Deployment and Performance
-    `
-  },
-  'typescript-generics-guide': {
-    title: 'Understanding TypeScript Generics',
-    date: 'March 10, 2024',
-    content: `
-      TypeScript generics are a powerful feature that allows you to write flexible, 
-      reusable code while maintaining type safety. In this deep dive, we'll explore 
-      how to effectively use generics in your TypeScript applications.
-
-      We'll start with the basics and gradually move to more advanced patterns and 
-      real-world use cases. By the end of this guide, you'll have a solid understanding 
-      of how to leverage generics to write better TypeScript code.
-
-      Topics covered:
-      - Basic Generic Syntax
-      - Generic Constraints
-      - Generic Classes and Interfaces
-      - Generic Type Inference
-      - Advanced Generic Patterns
-      - Real-world Examples
-    `
-  }
-};
-
 export default function BlogPost({ params }) {
   const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
   const { frontmatter, content } = getMarkdownContent(filePath);
