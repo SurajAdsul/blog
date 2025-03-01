@@ -1,11 +1,39 @@
 export const projects = [
   {
-    title: "AI Harvest Timesheet",
+    title: "Macro Intel",
     description:
-      "Convert Git commits into Harvest time entries.",
+      "Gives macro outlook of the global economy and stock market. Provides custom indicators that will help you make better investment decisions.",
+    tech: [
+      "Python",
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Highcharts",
+      "Tradingview charting library",
+    ],
+    status: "Coming Soon",
+  },
+  {
+    title: "AI Harvest Timesheet",
+    description: "Convert Git commits into Harvest time entries.",
     link: "https://github.com/Tech9Apps/ai-harvest-timesheet",
     tech: ["ElectronJS", "React", "TypeScript", "Tailwind CSS"],
-    status: "Live"
+    status: "Live",
+  },
+  {
+    title: "Smart Assistant",
+    description:
+      "A simple AI assistant that can help you perform different tasks using local Ollama models",
+    link: "https://github.com/SurajAdsul/smart-assistant",
+    tech: ["javascript", "Ollama"],
+  },
+  {
+    title: "Tradingview Indicators",
+    description:
+      "A collection of tradingview indicators for technical analysis",
+    link: "https://www.tradingview.com/script/Y3DJP3Co-CandleTrend",
+    tech: ["Python", "Tradingview Pine Script"],
+    status: "Live",
   },
   {
     title: "Ultralight",
@@ -15,19 +43,10 @@ export const projects = [
     tech: ["PHP", "Symfony", "MySQL", "Docker"],
   },
   {
-    title: "Tradingview Indicators",
-    description:
-      "A collection of tradingview indicators for technical analysis",
-    link: "https://www.tradingview.com/script/Y3DJP3Co-CandleTrend",
-    tech: ["Python", "Tradingview Pine Script"],
-    status: "Live"
-  },
-  {
     title: "Spreadsheet",
-    description:
-      "Use spreadsheet data to generate the CRUD APIs",
+    description: "Turn your spreadsheet data into CRUD APIs",
     tech: ["Laravel", "PHP", "MySQL", "Docker"],
-    status: "Discontinued"
+    status: "Discontinued",
   },
   {
     title: "Website Analyser",
@@ -35,7 +54,7 @@ export const projects = [
       "A Laravel application to analyse the performance of your website",
     link: "https://github.com/SurajAdsul/laravel-analyser",
     tech: ["Laravel", "PHP", "MySQL", "Docker"],
-    status: "Discontinued"
+    status: "Discontinued",
   },
 ];
 
@@ -93,4 +112,4 @@ export const techStack = {
   ],
   Tools: ["Git", "AWS", "Docker", "CI/CD"],
   "Payment Integrations": ["Stripe", "Lemon Squeezy", "PayPal"],
-}; 
+};
