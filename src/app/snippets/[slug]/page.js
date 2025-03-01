@@ -1,126 +1,19 @@
 import Link from 'next/link';
-
-const snippets = {
-  'nextjs-api-rate-limiting': {
-    title: 'Next.js API Route with Rate Limiting',
-    date: 'March 20, 2024',
-    content: `
-      Rate limiting is crucial for protecting your API endpoints from abuse. Here's how to implement 
-      rate limiting in Next.js API routes using Redis.
-
-      First, install the required dependencies:
-      \`\`\`bash
-      npm install rate-limiter-flexible ioredis
-      \`\`\`
-
-      Create a Redis client:
-      \`\`\`javascript
-      // lib/redis.js
-      import Redis from 'ioredis';
-
-      const redis = new Redis(process.env.REDIS_URL);
-      export default redis;
-      \`\`\`
-
-      Implement the rate limiter:
-      \`\`\`javascript
-      // pages/api/example.js
-      import { RateLimiterRedis } from 'rate-limiter-flexible';
-      import redis from '@/lib/redis';
-
-      const rateLimiter = new RateLimiterRedis({
-        storeClient: redis,
-        keyPrefix: 'ratelimit',
-        points: 10, // Number of requests
-        duration: 1, // Per second
-      });
-
-      export default async function handler(req, res) {
-        try {
-          await rateLimiter.consume(req.ip);
-          // Your API logic here
-          res.status(200).json({ message: 'Success' });
-        } catch (error) {
-          res.status(429).json({ message: 'Too Many Requests' });
-        }
-      }
-      \`\`\`
-
-      This implementation:
-      - Limits each IP to 10 requests per second
-      - Uses Redis for distributed rate limiting
-      - Returns 429 status when limit is exceeded
-      - Handles rate limiting errors gracefully
-    `
-  },
-  'react-custom-hooks': {
-    title: 'Essential React Custom Hooks',
-    date: 'March 18, 2024',
-    content: `
-      Custom hooks are a powerful way to reuse stateful logic in React components. Here are some 
-      essential custom hooks that you can use in your projects.
-
-      useLocalStorage Hook:
-      \`\`\`javascript
-      function useLocalStorage(key, initialValue) {
-        const [storedValue, setStoredValue] = useState(() => {
-          if (typeof window === 'undefined') return initialValue;
-          
-          try {
-            const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
-          } catch (error) {
-            console.error(error);
-            return initialValue;
-          }
-        });
-
-        const setValue = value => {
-          try {
-            const valueToStore = value instanceof Function ? value(storedValue) : value;
-            setStoredValue(valueToStore);
-            window.localStorage.setItem(key, JSON.stringify(valueToStore));
-          } catch (error) {
-            console.error(error);
-          }
-        };
-
-        return [storedValue, setValue];
-      }
-      \`\`\`
-
-      Usage:
-      \`\`\`javascript
-      function App() {
-        const [name, setName] = useLocalStorage('name', 'Bob');
-        return (
-          <input
-            type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-        );
-      }
-      \`\`\`
-
-      This hook:
-      - Syncs state with localStorage
-      - Handles JSON serialization/deserialization
-      - Works with SSR
-      - Includes error handling
-    `
-  }
-};
+import path from 'path';
+import { getMarkdownContent } from '@/utils/markdown';
+import { MarkdownContent } from '@/utils/markdown';
+import '@/styles/markdown.css';
 
 export default function SnippetPost({ params }) {
-  const snippet = snippets[params.slug];
+  const snippetPath = path.join(process.cwd(), 'content/snippets', `${params.slug}.md`);
+  const { frontmatter, content } = getMarkdownContent(snippetPath);
 
-  if (!snippet) {
+  if (!frontmatter) {
     return <div>Snippet not found</div>;
   }
 
   return (
-    <div className="sm:px-8 mt-16 lg:mt-32">
+    <div className="sm:px-8 mt-16 lg:mt-18">
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -149,33 +42,18 @@ export default function SnippetPost({ params }) {
                 <article>
                   <header className="flex flex-col">
                     <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                      {snippet.title}
+                      {frontmatter.title}
                     </h1>
                     <time
-                      dateTime={snippet.date}
+                      dateTime={frontmatter.date}
                       className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
                     >
                       <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                      <span className="ml-3">{snippet.date}</span>
+                      <span className="ml-3">{frontmatter.date}</span>
                     </time>
                   </header>
-                  <div className="mt-8 prose dark:prose-invert">
-                    {snippet.content.split('\n').map((paragraph, index) => {
-                      if (paragraph.trim().startsWith('```')) {
-                        const [_, language, ...code] = paragraph.split('\n');
-                        const codeContent = code.join('\n').replace('```', '');
-                        return (
-                          <pre key={index} className="language-javascript">
-                            <code>{codeContent}</code>
-                          </pre>
-                        );
-                      }
-                      return (
-                        <p key={index} className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                          {paragraph}
-                        </p>
-                      );
-                    })}
+                  <div className="mt-8 prose dark:prose-invert markdown-content">
+                    <MarkdownContent content={content} />
                   </div>
                 </article>
               </div>
