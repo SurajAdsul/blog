@@ -1,24 +1,41 @@
 export const projects = [
   {
-    title: "Easy UI",
+    title: "AI Harvest Timesheet",
     description:
-      "Collection of 50+ high-quality, free website templates designed to save time and reduce development costs.",
-    link: "https://github.com/yourusername/easy-ui",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+      "Convert Git commits into Harvest time entries.",
+    link: "https://github.com/Tech9Apps/ai-harvest-timesheet",
+    tech: ["ElectronJS", "React", "TypeScript", "Tailwind CSS"],
+    status: "Live"
   },
   {
-    title: "Reachactory",
+    title: "Ultralight",
     description:
-      "AI-powered SaaS platform for automated email outreach and lead generation.",
-    link: "https://reachactory.com",
-    tech: ["React", "Node.js", "OpenAI"],
+      "A simple microframework for creating REST API's using symfony components",
+    link: "https://github.com/SurajAdsul/ultralight",
+    tech: ["PHP", "Symfony", "MySQL", "Docker"],
   },
   {
-    title: "Reachactory",
+    title: "Tradingview Indicators",
     description:
-      "AI-powered SaaS platform for automated email outreach and lead generation.",
-    link: "https://reachactory.com",
-    tech: ["React", "Node.js", "OpenAI"],
+      "A collection of tradingview indicators for technical analysis",
+    link: "https://www.tradingview.com/script/Y3DJP3Co-CandleTrend",
+    tech: ["Python", "Tradingview Pine Script"],
+    status: "Live"
+  },
+  {
+    title: "Spreadsheet",
+    description:
+      "Use spreadsheet data to generate the CRUD APIs",
+    tech: ["Laravel", "PHP", "MySQL", "Docker"],
+    status: "Discontinued"
+  },
+  {
+    title: "Website Analyser",
+    description:
+      "A Laravel application to analyse the performance of your website",
+    link: "https://github.com/SurajAdsul/laravel-analyser",
+    tech: ["Laravel", "PHP", "MySQL", "Docker"],
+    status: "Discontinued"
   },
 ];
 

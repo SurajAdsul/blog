@@ -54,6 +54,12 @@ export const resources = {
       hostname: "udemy.com",
     },
     {
+      link: "https://visualgo.net/en",
+      title: "Visualgo",
+      description: "Visualgo is a platform for learning data structures and algorithms through visualizations.",
+      hostname: "visualgo.net",
+    },
+    {
       link: "https://huggingface.co/learn/agents-course/unit0/introduction",
       title: "Hugging Face Agents Course",
       description: "Hugging Face is a platform for building and sharing AI models.",
