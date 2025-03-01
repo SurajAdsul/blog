@@ -44,6 +44,7 @@ export const techStack = {
   Frameworks: [
     "Laravel",
     "Tailwind CSS",
+    "Gin Web Framework",
     "Serverless framework",
     "React",
     "Next.js",

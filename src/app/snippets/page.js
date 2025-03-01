@@ -1,19 +1,27 @@
-import { getAllMarkdownFiles } from '@/utils/markdown';
-import path from 'path';
-import '@/styles/markdown.css';
-import { CommandLineIcon, CodeBracketIcon, BeakerIcon, WrenchIcon, CodeBracketSquareIcon } from '@heroicons/react/24/outline';
+import "@/styles/markdown.css";
+import { getAllMarkdownFiles } from "@/utils/markdown";
+import "devicon/devicon.min.css";
+import path from "path";
 
-// Icons mapping
+// Icons mapping using devicon classes
 const icons = {
-  api: <CommandLineIcon className="h-6 w-6 flex-none text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110" />,
-  hook: <CodeBracketIcon className="h-6 w-6 flex-none text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110" />,
-  someKey: <BeakerIcon className="h-6 w-6 text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110" />,
-  anotherKey: <WrenchIcon className="h-6 w-6 text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110" />
+  laravel: (
+    <i className="devicon-laravel-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
+  react: (
+    <i className="devicon-react-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
+  database: (
+    <i className="devicon-azuresqldatabase-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
+  javascript: (
+    <i className="devicon-javascript-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
 };
 
 export default function SnippetsPage() {
   // Get all markdown files from the snippets directory
-  const snippetsDirectory = path.join(process.cwd(), 'content/snippets');
+  const snippetsDirectory = path.join(process.cwd(), "content/snippets");
   const snippets = getAllMarkdownFiles(snippetsDirectory);
 
   return (
@@ -26,7 +34,8 @@ export default function SnippetsPage() {
                 Code snippets for developers
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              A handy collection of code snippets for web development, find the code you need.
+                A handy collection of code snippets for web development which I
+                have collected over time.
               </p>
             </header>
 
@@ -61,4 +70,4 @@ export default function SnippetsPage() {
       </div>
     </div>
   );
-} 
+}

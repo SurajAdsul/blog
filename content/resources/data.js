@@ -1,62 +1,63 @@
 export const resources = {
-  "Development": [
+  Development: [
     {
-      link: "https://nextjs.org",
-      title: "Next.js",
-      description: "The React Framework for Production",
-      hostname: "nextjs.org"
+      link: "https://refactoring.guru",
+      title: "Refactoring Guru",
+      description: "Refactoring Guru is a website that provides a comprehensive guide to refactoring code.",
+      hostname: "refactoring.guru",
     },
     {
-      link: "https://tailwindcss.com",
-      title: "Tailwind CSS",
-      description: "A utility-first CSS framework",
-      hostname: "tailwindcss.com"
+      link: "https://openreplay.com/",
+      title: "OpenReplay",
+      description: "OpenReplay is an open-source tool for recording and analyzing user sessions in web applications.",
+      hostname: "openreplay.com",
     },
     {
-      link: "https://typescript.org",
-      title: "TypeScript",
-      description: "JavaScript with syntax for types",
-      hostname: "typescript.org"
+      link: "https://responsively.app",
+      title: "Responsively",
+      description: "Responsively is a browser that enables you to have a second browser window that is responsive to your current device.",
+      hostname: "responsively.app",
     },
   ],
-  "Design": [
+
+  Design: [
     {
-      link: "https://figma.com",
-      title: "Figma",
-      description: "Collaborative interface design tool",
-      hostname: "figma.com"
+      link: "https://mermaid.js.org",
+      title: "Mermaid",
+      description: "Diagramming and charting tool",
+      hostname: "mermaid.js.org",
     },
     {
       link: "https://coolors.co",
       title: "Coolors",
       description: "Color schemes generator",
-      hostname: "coolors.co"
+      hostname: "coolors.co",
+    },
+    {
+      link: "https://colorhunt.co",
+      title: "Color Hunt",
+      description: "Color Palettes",
+      hostname: "colorhunt.co",
     },
     {
       link: "https://dribbble.com",
       title: "Dribbble",
       description: "Design inspiration platform",
-      hostname: "dribbble.com"
+      hostname: "dribbble.com",
     },
   ],
-  "Learning": [
-    {
-      link: "https://egghead.io",
-      title: "Egghead",
-      description: "Concise screencasts for web developers",
-      hostname: "egghead.io"
-    },
-    {
-      link: "https://frontendmasters.com",
-      title: "Frontend Masters",
-      description: "Advanced web development training",
-      hostname: "frontendmasters.com"
-    },
+  Learning: [
     {
       link: "https://udemy.com",
       title: "Udemy",
       description: "Online learning marketplace",
-      hostname: "udemy.com"
+      hostname: "udemy.com",
+    },
+    {
+      link: "https://huggingface.co/learn/agents-course/unit0/introduction",
+      title: "Hugging Face Agents Course",
+      description: "Hugging Face is a platform for building and sharing AI models.",
+      hostname: "huggingface.co",
     },
   ],
-}; 
+};

@@ -2,7 +2,7 @@
 title: Optimize Laravel Queries with `when()`
 description: Improve query readability using conditional logic.
 date: March 20, 2024
-icon: hook
+icon: laravel
 ---
 
 ```php
