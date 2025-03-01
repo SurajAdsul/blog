@@ -1,3 +1,5 @@
+import { getMarkdownContent } from '@/utils/markdown';
+import path from 'path';
 import Link from 'next/link';
 
 const blogPosts = {
@@ -45,11 +47,8 @@ const blogPosts = {
 };
 
 export default function BlogPost({ params }) {
-  const post = blogPosts[params.slug];
-
-  if (!post) {
-    return <div>Post not found</div>;
-  }
+  const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
+  const { frontmatter, content } = getMarkdownContent(filePath);
 
   return (
     <div className="sm:px-8 mt-16 lg:mt-32">
@@ -78,26 +77,9 @@ export default function BlogPost({ params }) {
                   </svg>
                 </Link>
 
-                <article>
-                  <header className="flex flex-col">
-                    <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                      {post.title}
-                    </h1>
-                    <time
-                      dateTime={post.date}
-                      className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
-                    >
-                      <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                      <span className="ml-3">{post.date}</span>
-                    </time>
-                  </header>
-                  <div className="mt-8 prose dark:prose-invert">
-                    {post.content.split('\n').map((paragraph, index) => (
-                      <p key={index} className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
+                <article className="prose lg:prose-xl mx-auto px-4">
+                  <h1>{frontmatter.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: content }} />
                 </article>
               </div>
             </div>

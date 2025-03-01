@@ -73,7 +73,7 @@ const snippets = [
 
 export default function SnippetsPage() {
   return (
-    <div className="mt-16 sm:mt-32">
+    <div className="mt-16 sm:mt-18">
       <div className="mx-auto max-w-7xl">
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">

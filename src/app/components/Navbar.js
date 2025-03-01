@@ -60,7 +60,7 @@ export default function Navbar() {
     <div className={`fixed inset-x-0 top-0 z-50 transform transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
-      <nav className="pb-4 pt-10">
+      <nav className="pb-4 pt-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center mx-auto lg:max-w-5xl">
             {/* Profile Photo and Mobile Menu Button */}
@@ -162,7 +162,7 @@ export default function Navbar() {
             <div className="w-10 sm:w-20 flex justify-end">
               <button
                 onClick={toggleDarkMode}
-                className="rounded-full p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none"
+                className="cursor-pointer rounded-full p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none"
                 aria-label="Toggle Dark Mode"
               >
                 {isDark ? (
