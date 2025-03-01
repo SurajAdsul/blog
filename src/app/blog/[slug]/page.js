@@ -5,7 +5,9 @@ import '@/styles/markdown.css';
 
 // Add metadata export for better SEO
 export async function generateMetadata({ params }) {
-  const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
+  const resolvedParams = await params; // Await the params object
+  const slug = resolvedParams.slug; // Now access slug safely
+  const filePath = path.join(process.cwd(), 'content/blog', `${slug}.md`);
   const { frontmatter } = getMarkdownContent(filePath);
   
   return {
@@ -14,8 +16,10 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPost({ params }) {
-  const filePath = path.join(process.cwd(), 'content/blog', `${params.slug}.md`);
+export default async function BlogPost({ params }) {
+  const resolvedParams = await params; // Await the params object
+  const slug = resolvedParams.slug; // Now access slug safely
+  const filePath = path.join(process.cwd(), 'content/blog', `${slug}.md`);
   const { frontmatter, content } = getMarkdownContent(filePath);
 
   return (
