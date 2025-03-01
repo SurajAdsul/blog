@@ -1,30 +1,72 @@
 import Image from "next/image";
 import ProfileHeader from "./components/ProfileHeader";
+import WorkSection from "./components/WorkSection";
+import BlogPost from "./components/BlogPost";
 
 export default function Home() {
+  const blogPosts = [
+    {
+      title: "Building a Modern Web Application with Next.js",
+      slug: "modern-web-application-nextjs",
+      date: "March 15, 2024",
+      description: "A comprehensive guide to building modern web applications using Next.js and Tailwind CSS. Learn about the latest features, best practices, and performance optimizations.",
+    },
+    {
+      title: "Understanding TypeScript Generics",
+      slug: "typescript-generics-guide",
+      date: "March 10, 2024",
+      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
+    },
+    {
+      title: "Understanding TypeScript Generics",
+      slug: "typescript-generics-guide",
+      date: "March 10, 2024",
+      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
+    },
+    {
+      title: "Understanding TypeScript Generics",
+      slug: "typescript-generics-guide",
+      date: "March 10, 2024",
+      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
+    },
+  ];
+
+  const workProjects = [
+    {
+      title: "Project One",
+      description: "A web application built with Next.js and TypeScript",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Project Two",
+      description: "Real-time chat application using WebSocket",
+      tech: ["React", "Node.js", "Socket.io"],
+    },
+  ];
+
   return (
     <main className="min-h-screen">
       <div className="container max-w-7xl mx-auto p-4">
         <ProfileHeader />
-        <div className="max-w-2xl mx-auto lg:max-w-5xl">
-          <h1 className="mb-8">Welcome to My Blog</h1>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-8">
-            I write about web development, software engineering, and other tech-related topics.
-            Feel free to explore my blog posts, code snippets, and projects.
-          </p>
-          <div className="flex gap-4">
-            <a
-              href="/blog"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Read Blog
-            </a>
-            <a
-              href="/projects"
-              className="inline-flex items-center px-4 py-2 border border-zinc-300 dark:border-zinc-700 text-base font-medium rounded-md text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              View Projects
-            </a>
+        <div className="mx-auto lg:max-w-5xl">
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12">
+            {/* Blog Posts Column */}
+            <div>
+              <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 mb-6">
+                Latest Posts
+              </h2>
+              <div className="space-y-12">
+                {blogPosts.map((post, index) => (
+                  <BlogPost key={index} post={post} />
+                ))}
+              </div>
+            </div>
+
+            {/* Work Section */}
+            <div>
+              <WorkSection />
+            </div>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function ProfileHeader() {
             {' '}cool things
           </span>
         </div> */}
-        <p className="text-zinc-600 dark:text-zinc-500">
+        <p className="text-zinc-600 dark:text-zinc-400">
         Full Stack Developer passionate about building web applications and exploring new technologies. 
         I love solving complex problems and sharing insights from my journey.
         Find me on{' '}
