@@ -31,8 +31,8 @@ export default function RootLayout({ children }) {
       <body
         className="antialiased min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300 font-sans"
       >
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
+        <Navbar />
+        <div className="pt-32">
           <main className="flex-1">
             {children}
           </main>
