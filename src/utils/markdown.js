@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export function getMarkdownContent(filePath) {
   // Read the markdown file
@@ -29,7 +29,7 @@ export function MarkdownContent({ content }) {
           
           return !inline && language ? (
             <SyntaxHighlighter
-              style={oneDark}
+              style={dracula}
               language={language}
               PreTag="div"
               {...props}

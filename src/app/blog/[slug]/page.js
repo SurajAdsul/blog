@@ -19,7 +19,7 @@ export default function BlogPost({ params }) {
   const { frontmatter, content } = getMarkdownContent(filePath);
 
   return (
-    <div className="sm:px-8 mt-16 lg:mt-32">
+    <div className="sm:px-8 mt-16 lg:mt-18">
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">

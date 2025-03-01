@@ -18,6 +18,7 @@
 .markdown-content pre > div {
   margin: 0 !important;
   border-radius: 0.5rem;
+  background-color: #090915 !important; /* Override Dracula's background with zinc-800 */
 }
 
 .markdown-content code {
@@ -79,5 +80,8 @@
   }
   .prose h1 {
     color: rgb(244 244 245); /* dark:text-zinc-100 */
+  }
+  .markdown-content pre > div {
+    background-color: #090915 !important; /* Use zinc-900 for dark mode */
   }
 } 
