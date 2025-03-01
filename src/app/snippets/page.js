@@ -98,10 +98,9 @@ export default function SnippetsPage() {
                       {snippet.icon}
                     </div>
                     <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl">
-                      </div>
+                      <div className="absolute inset-0 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 rounded-2xl"></div>
                       <a href={`/snippets/${snippet.title.toLowerCase().replace(/ /g, '-')}`}>
-                        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span className="absolute inset-0 z-20 rounded-2xl"></span>
                         <span className="relative z-10">{snippet.title}</span>
                       </a>
                     </h2>
