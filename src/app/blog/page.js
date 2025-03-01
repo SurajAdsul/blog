@@ -1,4 +1,4 @@
-import BlogPost from '../components/BlogPost';
+import Link from 'next/link';
 
 const articles = [
   {
@@ -50,10 +50,13 @@ export default function BlogPage() {
                       <div className="md:col-span-3 group relative flex flex-col items-start">
                         <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                           <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                          <a href={`/blog/${article.slug}`}>
+                          <Link 
+                            href={`/blog/${article.slug}`}
+                            className="hover:text-teal-500 dark:hover:text-teal-400"
+                          >
                             <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                             <span className="relative z-10">{article.title}</span>
-                          </a>
+                          </Link>
                         </h2>
                         <time 
                           className="md:hidden relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" 
