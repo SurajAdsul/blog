@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav className="py-4">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center  mx-auto lg:max-w-5xl">
           {/* Profile Photo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <Link 

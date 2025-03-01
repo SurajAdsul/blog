@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function ProfileHeader() {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:space-x-14 w-full mb-10">
+    <div className=" mx-auto lg:max-w-5xl flex flex-col md:flex-row justify-between items-start md:space-x-14 w-full mb-10">
       <div className="flex md:w-3/4 flex-col mt-6">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
        Suraj Adsul

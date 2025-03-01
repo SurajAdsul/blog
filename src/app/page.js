@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="container max-w-7xl mx-auto p-4">
         <ProfileHeader />
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto lg:max-w-5xl">
           <h1 className="mb-8">Welcome to My Blog</h1>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-8">
             I write about web development, software engineering, and other tech-related topics.
