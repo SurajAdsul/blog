@@ -35,36 +35,31 @@ export default function Home() {
   ];
 
   return (
-    <div className="mt-16 sm:mt-32">
-      <div className="mx-auto max-w-7xl">
-        <div className="relative px-4 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl lg:max-w-5xl">
-            <ProfileHeader />
-
-            <div className="mt-16 sm:mt-20">
-              {/* Two Column Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12">
-                {/* Blog Posts Column */}
-                <div>
-                  <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 mb-6">
-                    Latest Posts
-                  </h2>
-                  <div className="space-y-12">
-                    {blogPosts.map((post, index) => (
-                      <BlogPost key={index} post={post} />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Work Section */}
-                <div>
-                  <WorkSection />
-                </div>
+    <main className="min-h-screen">
+      <div className="container max-w-7xl mx-auto p-4">
+        <ProfileHeader />
+        <div className="mx-auto lg:max-w-5xl">
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12">
+            {/* Blog Posts Column */}
+            <div>
+              <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 mb-6">
+                Latest Posts
+              </h2>
+              <div className="space-y-12">
+                {blogPosts.map((post, index) => (
+                  <BlogPost key={index} post={post} />
+                ))}
               </div>
+            </div>
+
+            {/* Work Section */}
+            <div>
+              <WorkSection />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

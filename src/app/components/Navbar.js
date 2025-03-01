@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Check if dark mode is active
@@ -33,7 +35,7 @@ export default function Navbar() {
   return (
     <nav className="py-4">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center  mx-auto lg:max-w-5xl">
+        <div className="flex justify-between items-center mx-auto lg:max-w-5xl">
           {/* Profile Photo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <Link 
@@ -74,34 +76,58 @@ export default function Navbar() {
           <div className="hidden sm:block rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10">
             <Link 
               href="/" 
-              className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+              className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150"
             >
-              <span className="relative z-10 text-teal-600">Home</span>
-              <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+              <span className={`relative z-10 ${pathname === '/' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Home
+              </span>
+              {pathname === '/' && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+              )}
             </Link>
             <Link 
               href="/blog" 
-              className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+              className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150"
             >
-              <span className="relative z-10 text-gray-600 dark:text-gray-50">Blog</span>
+              <span className={`relative z-10 ${pathname === '/blog' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Blog
+              </span>
+              {pathname === '/blog' && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+              )}
             </Link>
             <Link 
               href="/snippets" 
-              className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+              className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150"
             >
-              <span className="relative z-10 text-gray-600 dark:text-gray-50">Snippets</span>
+              <span className={`relative z-10 ${pathname === '/snippets' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Snippets
+              </span>
+              {pathname === '/snippets' && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+              )}
             </Link>
             <Link 
               href="/resources" 
-              className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+              className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150"
             >
-              <span className="relative z-10 text-gray-600 dark:text-gray-50">Resources</span>
+              <span className={`relative z-10 ${pathname === '/resources' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Resources
+              </span>
+              {pathname === '/resources' && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+              )}
             </Link>
             <Link 
               href="/projects" 
-              className="relative rounded-lg px-3 inline-block py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
+              className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150"
             >
-              <span className="relative z-10 text-gray-600 dark:text-gray-50">Projects</span>
+              <span className={`relative z-10 ${pathname === '/projects' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Projects
+              </span>
+              {pathname === '/projects' && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+              )}
             </Link>
           </div>
 
@@ -134,45 +160,55 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="sm:hidden mt-4">
-            <div className="rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10 space-y-1">
-              <Link
-                href="/"
-                className="relative block px-3 py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-              >
-                <span className="relative z-10 text-teal-600">Home</span>
-              </Link>
-              <Link
-                href="/blog"
-                className="relative block px-3 py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-              >
-                <span className="relative z-10 text-gray-600 dark:text-gray-50">Blog</span>
-              </Link>
-              <Link
-                href="/snippets"
-                className="relative block px-3 py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-              >
-                <span className="relative z-10 text-gray-600 dark:text-gray-50">Snippets</span>
-              </Link>
-              <Link
-                href="/resources"
-                className="relative block px-3 py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-              >
-                <span className="relative z-10 text-gray-600 dark:text-gray-50">Resources</span>
-              </Link>
-              <Link
-                href="/projects"
-                className="relative block px-3 py-2 text-sm text-gray-700 dark:text-gray-200 transition-all delay-150 hover:text-gray-900 dark:hover:text-gray-900"
-              >
-                <span className="relative z-10 text-gray-600 dark:text-gray-50">Projects</span>
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="sm:hidden mt-4">
+          <div className="rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10 space-y-1">
+            <Link
+              href="/"
+              className="relative block px-3 py-2 text-sm transition-all delay-150"
+            >
+              <span className={`relative z-10 ${pathname === '/' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Home
+              </span>
+            </Link>
+            <Link
+              href="/blog"
+              className="relative block px-3 py-2 text-sm transition-all delay-150"
+            >
+              <span className={`relative z-10 ${pathname === '/blog' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Blog
+              </span>
+            </Link>
+            <Link
+              href="/snippets"
+              className="relative block px-3 py-2 text-sm transition-all delay-150"
+            >
+              <span className={`relative z-10 ${pathname === '/snippets' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Snippets
+              </span>
+            </Link>
+            <Link
+              href="/resources"
+              className="relative block px-3 py-2 text-sm transition-all delay-150"
+            >
+              <span className={`relative z-10 ${pathname === '/resources' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Resources
+              </span>
+            </Link>
+            <Link
+              href="/projects"
+              className="relative block px-3 py-2 text-sm transition-all delay-150"
+            >
+              <span className={`relative z-10 ${pathname === '/projects' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                Projects
+              </span>
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 } 
