@@ -9,13 +9,15 @@ export default function Home() {
       title: "Building a Modern Web Application with Next.js",
       slug: "modern-web-application-nextjs",
       date: "March 15, 2024",
-      description: "A comprehensive guide to building modern web applications using Next.js and Tailwind CSS. Learn about the latest features, best practices, and performance optimizations.",
+      description:
+        "A comprehensive guide to building modern web applications using Next.js and Tailwind CSS. Learn about the latest features, best practices, and performance optimizations.",
     },
     {
       title: "Understanding TypeScript Generics",
       slug: "typescript-generics-guide",
       date: "March 10, 2024",
-      description: "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
+      description:
+        "Deep dive into TypeScript generics and their practical applications. From basic concepts to advanced patterns, learn how to write more flexible and reusable code.",
     },
   ];
 

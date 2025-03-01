@@ -1,19 +1,22 @@
 const projects = [
   {
     title: "Easy UI",
-    description: "Collection of 50+ high-quality, free website templates designed to save time and reduce development costs.",
+    description:
+      "Collection of 50+ high-quality, free website templates designed to save time and reduce development costs.",
     link: "https://github.com/yourusername/easy-ui",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "Reachactory",
-    description: "AI-powered SaaS platform for automated email outreach and lead generation.",
+    description:
+      "AI-powered SaaS platform for automated email outreach and lead generation.",
     link: "https://reachactory.com",
     tech: ["React", "Node.js", "OpenAI"],
   },
   {
     title: "Reachactory",
-    description: "AI-powered SaaS platform for automated email outreach and lead generation.",
+    description:
+      "AI-powered SaaS platform for automated email outreach and lead generation.",
     link: "https://reachactory.com",
     tech: ["React", "Node.js", "OpenAI"],
   },
@@ -21,12 +24,57 @@ const projects = [
 ];
 
 const techStack = {
-  "Languages": ["PHP", "Golang", "Javascript", "HTML", "CSS", "TypeScript", "Python", "SQL"],
-  "Database/Management": ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "Firebase", "Supabase"],
-  "Frameworks": ["Laravel", "Tailwind CSS", "Serverless framework", "React", "Next.js", "ElectronJS", "Node.js",  "AlpineJS", "Express", "jQuery", "WordPress", "Shopify"],
-  "Deployment Platforms": ["AWS", "Bref", "Laravel Vapor", "Digital Ocean", "Vercel", "Render", "Cloudflare", "Huggingface"],
-  "AI": ["OpenAI", "Ollama Meta AI", "Dall-E", "Langchain SDK", "Finetuning Models", "Embedding"],
-  "Tools": ["Git", "AWS", "Docker", "CI/CD"],
+  Languages: [
+    "PHP",
+    "Golang",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "TypeScript",
+    "Python",
+    "SQL",
+  ],
+  "Database/Management": [
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "MongoDB",
+    "Firebase",
+    "Supabase",
+  ],
+  Frameworks: [
+    "Laravel",
+    "Tailwind CSS",
+    "Serverless framework",
+    "React",
+    "Next.js",
+    "ElectronJS",
+    "Node.js",
+    "AlpineJS",
+    "Express",
+    "jQuery",
+    "WordPress",
+    "Shopify",
+  ],
+  "Deployment Platforms": [
+    "AWS",
+    "Bref",
+    "Laravel Vapor",
+    "Digital Ocean",
+    "Vercel",
+    "Render",
+    "Cloudflare",
+    "Huggingface",
+  ],
+  AI: [
+    "OpenAI",
+    "Ollama Meta AI",
+    "Dall-E",
+    "Langchain SDK",
+    "Finetuning Models",
+    "Embedding",
+  ],
+  Tools: ["Git", "AWS", "Docker", "CI/CD"],
   "Payment Integrations": ["Stripe", "Lemon Squeezy", "PayPal"],
 };
 
@@ -41,8 +89,11 @@ export default function ProjectsPage() {
                 Things I've made trying to put my dent in the universe.
               </h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                I've worked on tons of little projects over the years but these are the ones that I'm most proud of. 
-                Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.
+                I've worked on tons of little projects over the years but these
+                are the ones that I'm most proud of. Many of them are
+                open-source, so if you see something that piques your interest,
+                check out the code and contribute if you have ideas for how it
+                can be improved.
               </p>
             </header>
 
@@ -51,10 +102,13 @@ export default function ProjectsPage() {
               <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 Technical Arsenal
               </h2>
-              
+
               <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-7">
                 {Object.entries(techStack).map(([category, items], index) => (
-                  <div key={category} className={`${index === 3 ? 'mb-6 md:mb-0' : ''}`}>
+                  <div
+                    key={category}
+                    className={`${index === 3 ? "mb-6 md:mb-0" : ""}`}
+                  >
                     <h3 className="text-sm font-medium text-teal-500 dark:text-teal-400">
                       {category}
                     </h3>
@@ -71,9 +125,16 @@ export default function ProjectsPage() {
               </div>
 
               <p className="mt-8 text-sm text-zinc-600 dark:text-zinc-400">
-              This toolkit empowers me to design and develop solutions from prototype to production, ensuring{' '}
-                <span className="text-teal-500 dark:text-teal-400">scalability</span> and{' '}
-                <span className="text-teal-500 dark:text-teal-400">maintainability</span> at every stage.
+                This toolkit empowers me to design and develop solutions from
+                prototype to production, ensuring{" "}
+                <span className="text-teal-500 dark:text-teal-400">
+                  scalability
+                </span>{" "}
+                and{" "}
+                <span className="text-teal-500 dark:text-teal-400">
+                  maintainability
+                </span>{" "}
+                at every stage.
               </p>
             </div>
 
@@ -117,6 +178,8 @@ export default function ProjectsPage() {
                       </svg>
                       <span className="ml-2">View project</span>
                     </div>
+                    <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
+                    <span className="absolute inset-y-1 left-0 w-px bg-gradient-to-b from-blue-500/0 via-blue-500/40 to-blue-500/0 dark:from-blue-400/0 dark:via-blue-400/40 dark:to-blue-400/0"></span>
                   </a>
                 ))}
               </div>
@@ -126,4 +189,4 @@ export default function ProjectsPage() {
       </div>
     </div>
   );
-} 
+}
