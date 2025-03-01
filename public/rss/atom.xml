@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://surajadsul.com</id>
+    <title>Suraj Adsul's Blog</title>
+    <updated>2025-03-01T05:01:08.953Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Suraj Adsul</name>
+        <email>surajadsul@gmail.com</email>
+        <uri>https://surajadsul.com</uri>
+    </author>
+    <link rel="alternate" href="https://surajadsul.com"/>
+    <subtitle>Articles about software development, technology, and personal experiences</subtitle>
+    <logo>https://surajadsul.com/images/profile.jpg</logo>
+    <icon>https://surajadsul.com/favicon.ico</icon>
+    <rights>All rights reserved 2025, Suraj Adsul</rights>
+    <entry>
+        <title type="html"><![CDATA[Conquering the CSS Nightmare as a Backend Engineer]]></title>
+        <id>https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer</id>
+        <link href="https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer"/>
+        <updated>2021-05-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A journey from struggling with CSS to mastering UI development using Tailwind CSS. Learn how a backend engineer overcame the fear of styling and embraced frontend design.]]></summary>
+        <content type="html"><![CDATA[
+It's been a long time since I last wrote an article, and since this crazy time started, I hope all of you are doing well and coping with the pandemic situation.
+
+## My Journey into UI Development
+
+I started my professional career as a full-stack engineer but mostly focused on backend development. While I used Bootstrap and some UI libraries to quickly build interfaces, I never had full control over the UI. Most people found my work impressive at the time, but deep down, I felt guilty relying on heavy libraries with limited flexibility.
+
+If you have a good UI/UX sense, these libraries often feel restrictive. So, I attempted to learn CSS—but coming from a backend background, it was far from enjoyable. Writing CSS felt unintuitive, requiring too much effort just to name reusable classes, and yet, the results still felt unstructured.
+
+## The Struggle with CSS
+
+Despite my love for well-designed UIs, writing CSS felt like a nightmare. Learning Vue.js or React was much easier compared to styling. Most backend engineers I knew shared the same fear—CSS seemed difficult because we rarely had to write it from scratch. Instead, we often copy-pasted components and moved on.
+
+I spent countless hours browsing Dribbble and admiring beautiful UIs from companies like Netflix, Stripe, and Spotify, wondering if I would ever be able to create something similar. My frustration led me to tools like Adobe XD and Figma, where I enjoyed designing interfaces. But I still had one major problem: I couldn't translate those designs into code.
+
+## The Turning Point: Discovering Tailwind CSS
+
+Fast forward a few years, and Adam Wathan introduced Tailwind CSS. As a long-time Laravel community follower, I decided to give it a shot. At first, using Tailwind felt difficult due to my limited CSS knowledge. However, its utility-first approach made styling more intuitive and enjoyable. For the first time, writing CSS felt fun!
+
+I started implementing different designs using Tailwind, and it was a game-changer. With its content-agnostic classes, I could build UI components much faster without losing control over styling. I finally had the power of raw CSS without the usual struggles.
+
+## Cloning Websites and Mastering UI
+
+To practice, I began cloning popular websites like Spotify, Myntra, Facebook, Hotstar, Netflix, and Amazon. This approach taught me advanced CSS concepts like animations, blending modes, and responsiveness. Thanks to Tailwind CSS, replicating UIs became an enjoyable learning experience instead of a frustrating chore.
+
+Initially, it took me 2-3 days to clone a website. But with practice, I could recreate complex UIs in just a few hours. My fear of CSS was finally gone!
+
+## Why Tailwind CSS?
+
+### Pros:
+- Provides utility classes with full UI control.
+- Intuitive syntax that reduces cognitive load and boosts productivity.
+- Fun and easy to write.
+- Includes PurgeCSS, ensuring only used classes are included in the production build.
+- Encourages component-based thinking.
+- Well-thought-out utility classes and color palettes.
+- Fully customizable.
+- Simplifies animations, gradients, and blending modes.
+- Built-in dark mode support.
+- Just-In-Time (JIT) mode for arbitrary styles.
+- Supports presets for maintaining design consistency across projects.
+
+### Cons:
+- Results in numerous classes in your HTML.
+  - However, with modern JavaScript frameworks and Blade templates, component-based structuring helps mitigate this issue.
+- Still requires fundamental CSS knowledge.
+  - If you just want a quick prototype without dealing with CSS, Bootstrap or Foundation may be better options.
+
+That said, I still recommend Tailwind CSS, even for prototyping. There are plenty of ready-made Tailwind component libraries available to speed up development while maintaining full UI control.
+
+## Useful Tailwind CSS Resources
+
+- **Official Tailwind UI (Paid)**: [https://tailwindui.com/](https://tailwindui.com/)
+- **Free Tailwind Component Libraries**:
+  - [https://tailblocks.cc/](https://tailblocks.cc/)
+  - [https://merakiui.com/](https://merakiui.com/)
+  - [https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
+
+## Final Thoughts
+
+If you're like me—someone who loves great UI but struggled with CSS—I encourage you to try Tailwind CSS. Work on sample projects, find inspiration on Dribbble, and start experimenting. It may just change the way you approach frontend development, as it did for me.
+
+
+]]></content>
+        <author>
+            <name>Suraj Adsul</name>
+            <email>surajadsul@gmail.com</email>
+            <uri>https://surajadsul.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Creating Worklogs Using Cursor AI Editor]]></title>
+        <id>https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor</id>
+        <link href="https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor"/>
+        <updated>2025-03-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how to efficiently create and manage daily worklogs using the Cursor AI editor with a structured approach.]]></summary>
+        <content type="html"><![CDATA[
+Keeping a structured and detailed worklog is essential for tracking progress, maintaining accountability, and improving productivity. The Cursor AI editor provides an efficient way to maintain daily worklogs with a predefined structure. This guide outlines the best practices for creating and managing worklogs using Cursor AI.
+
+## Worklog Format and Structure
+Each daily worklog should follow a consistent structure for clarity and ease of reference. The format should be as follows:
+
+```markdown
+# Daily Worklog - [YYYY-MM-DD]
+
+## Summary
+- Brief overview of the day's main accomplishments
+- Key decisions made
+- Any blockers encountered
+
+## Tasks Completed
+- [x] Task 1
+  - Details/Implementation notes
+- [x] Task 2
+  - Details/Implementation notes
+
+## In Progress
+- [ ] Ongoing task 1
+  - Current status
+  - Next steps
+
+## Blockers/Issues
+- List any blockers or issues encountered
+- Include potential solutions or workarounds
+
+## Notes
+- Additional important information
+- Links to relevant resources
+- Meeting notes or decisions
+
+## Tomorrow's Plan
+- [ ] Planned task 1
+- [ ] Planned task 2
+
+## Time Tracking
+- Task 1: X hours
+- Task 2: Y hours
+
+
+## Worklog Guidelines
+To maintain consistency and organization, adhere to these guidelines:
+
+1. **Date Format**: Always use `YYYY-MM-DD` (e.g., `2024-03-21`).
+2. **Storage Location**: Store worklogs in the directory structure `docs/worklogs/YYYY-MM/YYYY-MM-DD.md`.
+3. **Naming Convention**: Use lowercase filenames and adhere to the `YYYY-MM-DD.md` format.
+4. **Task Status**: Use `- [ ]` for incomplete tasks and `- [x]` for completed tasks.
+5. **Time Tracking**: Always include time spent on major tasks for better time management.
+6. **Links**: Include relevant links such as PRs, documentation, or meeting notes.
+7. **Blockers**: Clearly document any blockers, their status, and any attempted solutions.
+
+## Best Practices
+To ensure your worklogs remain useful and effective, follow these best practices:
+
+1. **Start at the Beginning of the Day**: Outline planned tasks and priorities.
+2. **Update Throughout the Day**: Keep track of completed tasks and new developments.
+3. **Finalize at the End of the Day**: Review and ensure completeness before storing.
+4. **Include Technical Details**: Be specific about implementations, changes, and issues faced.
+5. **Reference Relevant Tickets/Issues**: Include issue numbers and descriptions where applicable.
+6. **Maintain Professionalism**: Use clear and professional language.
+7. **Document Decisions and Rationale**: Ensure clarity on why certain decisions were made.
+
+```
+
+## Conclusion
+By using the Cursor AI editor to maintain structured and detailed worklogs, you can enhance productivity and ensure better documentation of your daily work. Following the outlined structure, guidelines, and best practices will make worklogs more effective and easier to review in the future.
+
+]]></content>
+        <author>
+            <name>Suraj Adsul</name>
+            <email>surajadsul@gmail.com</email>
+            <uri>https://surajadsul.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable]]></title>
+        <id>https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</id>
+        <link href="https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable"/>
+        <updated>2025-03-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A step-by-step guide on integrating Tailwind CSS into a legacy project using the standalone executable. Learn how to set up the project structure, configure styles, and streamline the build process without relying on npm.]]></summary>
+        <content type="html"><![CDATA[
+# Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable
+
+In a legacy project, integrating Tailwind CSS using the standalone executable instead of npm can be an effective approach. Here's how it can be implemented and why this method works well.
+
+## Implementation Approach
+
+### 1. Project Structure
+
+A structured approach to organizing Tailwind integration:
+
+```
+project-root/
+├── tailwindcss (executable)
+├── public/
+│   └── css/
+│       ├── tailwind-input.css
+│       └── tailwind.css (generated)
+└── Makefile
+```
+
+### 2. Configuration Files
+
+A `tailwind-input.css` file can be created as the main configuration:
+
+```css
+@import 'tailwindcss/theme.css';
+@import 'tailwindcss/preflight.css';
+@import 'tailwindcss/utilities.css';
+@import './fonts.css' layer(base);
+@plugin "@tailwindcss/aspect-ratio";
+
+@theme {
+    --font-primary: Arial;
+    --font-secondary: Helvetica;
+    /* Custom theme variables */
+}
+
+@layer utilities {
+    /* Custom utility classes */
+    .container-custom {
+        margin-inline: auto !important;
+        width: 100% !important;
+        max-width: 640px !important;
+    }
+}
+```
+
+### 3. Build Process
+
+A simple Makefile can be used to manage Tailwind CSS compilation:
+
+```makefile
+.PHONY: watch build
+
+watch:
+	./tailwindcss -i ./public/css/tailwind-input.css -o ./public/css/tailwind.css --watch
+
+build:
+	./tailwindcss -i ./public/css/tailwind-input.css -o ./public/css/tailwind.css --minify
+```
+
+Commands:
+- `make watch`: Watches for changes during development
+- `make build`: Creates a minified production version
+
+### 4. Integration with HTML
+
+The compiled CSS file is included in templates:
+
+```html
+<link rel="stylesheet" type="text/css" href="/css/tailwind.css?version=1.0.5" />
+```
+
+## Key Benefits of This Approach
+
+1. **No npm Dependencies**: Avoids adding npm and its dependency tree.
+2. **Simple Build Process**: Requires only a single executable and a Makefile.
+3. **Easy Version Control**: The standalone executable can be managed separately.
+4. **Fast Compilation**: Optimized performance with the standalone executable.
+
+## Scoped Usage
+
+A clear approach to scope Tailwind CSS usage ensures maintainability:
+
+```markdown
+TailwindCSS is used exclusively in specific directories. 
+For other files, standard CSS is maintained.
+```
+
+This scoped approach helps:
+- Maintain boundaries between legacy and modern CSS
+- Gradually introduce Tailwind CSS without disrupting existing styles
+- Keep the codebase structured and maintainable
+
+## Example Usage
+
+An example of using Tailwind CSS:
+
+```html
+<div class="header-blue flex pl-10 font-primary text-white bg-gray-800 h-32 relative">
+  <div class="absolute left-0 top-0 h-full w-5 bg-pattern bg-no-repeat bg-center"></div>
+  <h1 class="ml-8 text-4xl md:text-5xl">Sample Header</h1>
+</div>
+```
+
+## Best Practices
+
+1. **Version Control**: Track compiled CSS file versions using query parameters.
+2. **Scoped Implementation**: Use Tailwind CSS in designated directories.
+3. **Custom Utilities**: Create reusable utility classes as needed.
+4. **Build Process**: Use a Makefile for consistent builds across environments.
+
+## Conclusion
+
+Using the Tailwind CSS standalone executable is an efficient way to modernize a legacy project's CSS without introducing complex dependencies. This approach enables the advantages of utility-first CSS while maintaining simplicity and compatibility with existing styles.
+
+The key to success is maintaining clear boundaries between legacy and modern CSS patterns, allowing a gradual transition to modern styling practices while keeping the codebase structured and manageable.
+
+]]></content>
+        <author>
+            <name>Suraj Adsul</name>
+            <email>surajadsul@gmail.com</email>
+            <uri>https://surajadsul.com</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building AI Harvest Timesheet: My Journey with Cursor IDE]]></title>
+        <id>https://surajadsul.com/blog/my_journey_with_cursor_ide</id>
+        <link href="https://surajadsul.com/blog/my_journey_with_cursor_ide"/>
+        <updated>2025-02-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Exploring how Cursor IDE enhanced the development of AI Harvest Timesheet, an application that converts Git commits into Harvest time entries.]]></summary>
+        <content type="html"><![CDATA[
+As a developer who values both productivity and accuracy in time tracking, I embarked on a journey to create AI Harvest Timesheet, an innovative application that bridges the gap between Git commits and Harvest time entries. In this blog post, I'll share my experience building this application using Cursor, a cutting-edge IDE that made the development process smoother and more efficient.
+
+## The Project Vision
+
+The idea was born from a common pain point many developers face: maintaining accurate time records while staying focused on coding. I envisioned an application that would:
+- Automatically convert Git commits into Harvest time entries
+- Intelligently distribute hours across commits
+- Provide a modern, user-friendly interface
+- Handle multiple repositories seamlessly
+- Integrate smoothly with Harvest's API
+
+## Why Cursor?
+
+Cursor proved to be an invaluable tool throughout the development process. Its AI-powered features and intuitive interface significantly enhanced my development workflow. Here's how Cursor helped at various stages:
+
+### 1. Project Setup and Structure
+
+Cursor's intelligent code suggestions helped me set up the project structure efficiently. The application is built with Electron, and Cursor's understanding of the framework made it easier to:
+- Set up the initial boilerplate
+- Organize the codebase into logical components
+- Manage dependencies effectively
+
+### 2. Feature Implementation
+
+Some of the key features where Cursor's AI capabilities shined include:
+
+#### Smart Git Integration
+Cursor helped me implement complex Git operations with its context-aware code completion and documentation integration. The IDE's suggestions were particularly helpful when working with:
+- Repository management
+- Commit history processing
+- Branch pattern recognition
+
+#### Harvest API Integration
+When implementing the Harvest API integration, Cursor's ability to understand API documentation and suggest relevant code patterns made the process much smoother. This included:
+- API authentication
+- Project and task synchronization
+- Time entry creation
+
+#### User Interface Development
+The modern Material UI implementation was streamlined thanks to Cursor's:
+- Component suggestions
+- CSS assistance
+- Layout optimization hints
+
+### 3. Error Handling and Testing
+
+Cursor's AI capabilities were instrumental in:
+- Identifying potential edge cases
+- Suggesting robust error handling patterns
+- Helping write comprehensive tests
+
+## Key Technical Challenges and Solutions
+
+### 1. Time Distribution Algorithm
+One of the most complex aspects was developing an algorithm for intelligent hour distribution. Cursor helped by:
+- Suggesting optimal data structures
+- Identifying edge cases in the distribution logic
+- Providing relevant mathematical implementations
+
+### 2. Multi-Repository Management
+Managing multiple Git repositories required careful state management. Cursor assisted with:
+- Efficient data storage patterns
+- Concurrent operation handling
+- Repository settings persistence
+
+### 3. Webhook Integration
+Implementing webhook support for custom message formatting was made easier with Cursor's:
+- API endpoint suggestions
+- JSON parsing implementations
+- Error handling patterns
+
+## Project Structure and Organization
+
+The final project structure reflects a well-organized application:
+```
+ai-harvest-timesheet/
+├── src/
+│   ├── components/    # UI components
+│   ├── services/      # Core services
+│   ├── utils/         # Helper functions
+│   └── config/        # Configuration
+├── docs/             # Documentation
+├── tests/            # Test suites
+└── build/            # Build outputs
+```
+
+## Lessons Learned
+
+Throughout this project, I learned several valuable lessons:
+
+1. **AI-Powered Development**: Cursor's AI capabilities significantly reduced development time and improved code quality.
+
+2. **Code Organization**: The importance of maintaining a clean, modular codebase was reinforced by Cursor's suggestions.
+
+3. **Documentation**: Cursor helped maintain comprehensive documentation alongside the code.
+
+## Conclusion
+
+Building AI Harvest Timesheet with Cursor was an enlightening experience that showcased the power of AI-assisted development. The final product is a robust, user-friendly application that solves a real problem for developers.
+
+The combination of Cursor's intelligent features and my vision for automated time tracking resulted in an application that I'm proud of and that others find valuable. The project is open-source and available on GitHub, where it continues to evolve with community contributions.
+
+For developers interested in trying out AI Harvest Timesheet or contributing to its development, you can find the project at [GitHub repository link](https://github.com/Tech9Apps/ai-harvest-timesheet).
+
+]]></content>
+        <author>
+            <name>Suraj Adsul</name>
+            <email>surajadsul@gmail.com</email>
+            <uri>https://surajadsul.com</uri>
+        </author>
+    </entry>
+</feed>

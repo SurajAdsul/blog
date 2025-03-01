@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import path from 'path';
-import { getMarkdownContent } from '@/utils/markdown';
-import { MarkdownContent } from '@/utils/markdown';
+import { getMarkdownContent, getAllMarkdownFiles, MarkdownContent } from '@/utils/markdown';
 import '@/styles/markdown.css';
+
+export async function generateStaticParams() {
+  const snippets = getAllMarkdownFiles(path.join(process.cwd(), 'content/snippets'));
+  return snippets.map((snippet) => ({
+    slug: snippet.slug,
+  }));
+}
 
 export default async function SnippetPost({ params }) {
   const resolvedParams = await params; // Await the params object

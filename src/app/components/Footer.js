@@ -7,6 +7,7 @@ export default function Footer() {
     { name: 'Snippets', href: '/snippets' },
     { name: 'Resources', href: '/resources' },
     { name: 'Projects', href: '/projects' },
+    { name: 'RSS', href: '/rss/feed.xml' },
   ];
 
   return (

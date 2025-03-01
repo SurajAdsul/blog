@@ -1,7 +1,14 @@
-import { getMarkdownContent, MarkdownContent } from '@/utils/markdown';
+import { getMarkdownContent, MarkdownContent, getAllMarkdownFiles } from '@/utils/markdown';
 import path from 'path';
 import Link from 'next/link';
 import '@/styles/markdown.css';
+
+export async function generateStaticParams() {
+  const posts = getAllMarkdownFiles(path.join(process.cwd(), 'content/blog'));
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 // Add metadata export for better SEO
 export async function generateMetadata({ params }) {
