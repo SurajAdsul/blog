@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://surajadsul.com</id>
+    <id>https://surajadsul.me</id>
     <title>Suraj Adsul's Blog</title>
-    <updated>2025-03-01T05:01:08.953Z</updated>
+    <updated>2025-03-01T05:23:18.638Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Suraj Adsul</name>
-        <email>surajadsul@gmail.com</email>
-        <uri>https://surajadsul.com</uri>
+        <email>surajadsul02@gmail.com</email>
+        <uri>https://surajadsul.me</uri>
     </author>
-    <link rel="alternate" href="https://surajadsul.com"/>
+    <link rel="alternate" href="https://surajadsul.me"/>
     <subtitle>Articles about software development, technology, and personal experiences</subtitle>
-    <logo>https://surajadsul.com/images/profile.jpg</logo>
-    <icon>https://surajadsul.com/favicon.ico</icon>
+    <logo>https://surajadsul.me/images/profile.jpg</logo>
+    <icon>https://surajadsul.me/favicon.ico</icon>
     <rights>All rights reserved 2025, Suraj Adsul</rights>
     <entry>
         <title type="html"><![CDATA[Conquering the CSS Nightmare as a Backend Engineer]]></title>
-        <id>https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer</id>
-        <link href="https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer"/>
+        <id>https://surajadsul.me/blog/conquering_the_css_nightmare_as_a_backend_engineer</id>
+        <link href="https://surajadsul.me/blog/conquering_the_css_nightmare_as_a_backend_engineer"/>
         <updated>2021-05-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A journey from struggling with CSS to mastering UI development using Tailwind CSS. Learn how a backend engineer overcame the fear of styling and embraced frontend design.]]></summary>
         <content type="html"><![CDATA[
@@ -86,14 +86,14 @@ If you're like me—someone who loves great UI but struggled with CSS—I encour
 ]]></content>
         <author>
             <name>Suraj Adsul</name>
-            <email>surajadsul@gmail.com</email>
-            <uri>https://surajadsul.com</uri>
+            <email>surajadsul02@gmail.com</email>
+            <uri>https://surajadsul.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Creating Worklogs Using Cursor AI Editor]]></title>
-        <id>https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor</id>
-        <link href="https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor"/>
+        <id>https://surajadsul.me/blog/creating_worklogs_using_cursor_ai_editor</id>
+        <link href="https://surajadsul.me/blog/creating_worklogs_using_cursor_ai_editor"/>
         <updated>2025-03-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Learn how to efficiently create and manage daily worklogs using the Cursor AI editor with a structured approach.]]></summary>
         <content type="html"><![CDATA[
@@ -169,14 +169,14 @@ By using the Cursor AI editor to maintain structured and detailed worklogs, you 
 ]]></content>
         <author>
             <name>Suraj Adsul</name>
-            <email>surajadsul@gmail.com</email>
-            <uri>https://surajadsul.com</uri>
+            <email>surajadsul02@gmail.com</email>
+            <uri>https://surajadsul.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable]]></title>
-        <id>https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</id>
-        <link href="https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable"/>
+        <id>https://surajadsul.me/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</id>
+        <link href="https://surajadsul.me/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable"/>
         <updated>2025-03-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A step-by-step guide on integrating Tailwind CSS into a legacy project using the standalone executable. Learn how to set up the project structure, configure styles, and streamline the build process without relying on npm.]]></summary>
         <content type="html"><![CDATA[
@@ -301,14 +301,14 @@ The key to success is maintaining clear boundaries between legacy and modern CSS
 ]]></content>
         <author>
             <name>Suraj Adsul</name>
-            <email>surajadsul@gmail.com</email>
-            <uri>https://surajadsul.com</uri>
+            <email>surajadsul02@gmail.com</email>
+            <uri>https://surajadsul.me</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Building AI Harvest Timesheet: My Journey with Cursor IDE]]></title>
-        <id>https://surajadsul.com/blog/my_journey_with_cursor_ide</id>
-        <link href="https://surajadsul.com/blog/my_journey_with_cursor_ide"/>
+        <id>https://surajadsul.me/blog/my_journey_with_cursor_ide</id>
+        <link href="https://surajadsul.me/blog/my_journey_with_cursor_ide"/>
         <updated>2025-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Exploring how Cursor IDE enhanced the development of AI Harvest Timesheet, an application that converts Git commits into Harvest time entries.]]></summary>
         <content type="html"><![CDATA[
@@ -419,8 +419,8 @@ For developers interested in trying out AI Harvest Timesheet or contributing to 
 ]]></content>
         <author>
             <name>Suraj Adsul</name>
-            <email>surajadsul@gmail.com</email>
-            <uri>https://surajadsul.com</uri>
+            <email>surajadsul02@gmail.com</email>
+            <uri>https://surajadsul.me</uri>
         </author>
     </entry>
 </feed>

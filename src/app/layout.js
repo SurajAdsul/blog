@@ -10,8 +10,52 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Suraj Adsul",
-  description: "Software Engineer",
+  metadataBase: new URL('https://surajadsul.me'),
+  title: {
+    default: "Suraj Adsul - Full Stack Developer",
+    template: "%s | Suraj Adsul"
+  },
+  description: "Full Stack Developer passionate about building web applications and exploring new technologies. Blog about software development, engineering practices, and tech insights.",
+  keywords: ["Full Stack Developer", "Software Engineering", "Laravel", "Cursor Editor", "AI", "Web Development", "JavaScript", "React", "Node.js", "Tech Blog"],
+  authors: [{ name: "Suraj Adsul", url: "https://surajadsul.me" }],
+  creator: "Suraj Adsul",
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://surajadsul.me',
+    siteName: 'Suraj Adsul',
+    title: 'Suraj Adsul - Full Stack Developer',
+    description: 'Full Stack Developer passionate about building web applications and exploring new technologies. Blog about software development, engineering practices, and tech insights.',
+    images: [
+      {
+        url: '/images/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Suraj Adsul',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Suraj Adsul - Full Stack Developer',
+    description: 'Full Stack Developer passionate about building web applications and exploring new technologies.',
+    creator: '@surajadsul',
+    images: ['/images/profile.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
 };
 
 export default function RootLayout({ children }) {

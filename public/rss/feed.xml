@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Suraj Adsul's Blog</title>
-        <link>https://surajadsul.com</link>
+        <link>https://surajadsul.me</link>
         <description>Articles about software development, technology, and personal experiences</description>
-        <lastBuildDate>Sat, 01 Mar 2025 05:01:08 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Mar 2025 05:23:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <image>
             <title>Suraj Adsul's Blog</title>
-            <url>https://surajadsul.com/images/profile.jpg</url>
-            <link>https://surajadsul.com</link>
+            <url>https://surajadsul.me/images/profile.jpg</url>
+            <link>https://surajadsul.me</link>
         </image>
         <copyright>All rights reserved 2025, Suraj Adsul</copyright>
         <item>
             <title><![CDATA[Conquering the CSS Nightmare as a Backend Engineer]]></title>
-            <link>https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer</link>
-            <guid>https://surajadsul.com/blog/conquering_the_css_nightmare_as_a_backend_engineer</guid>
+            <link>https://surajadsul.me/blog/conquering_the_css_nightmare_as_a_backend_engineer</link>
+            <guid>https://surajadsul.me/blog/conquering_the_css_nightmare_as_a_backend_engineer</guid>
             <pubDate>Sat, 29 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[A journey from struggling with CSS to mastering UI development using Tailwind CSS. Learn how a backend engineer overcame the fear of styling and embraced frontend design.]]></description>
             <content:encoded><![CDATA[
@@ -84,12 +84,12 @@ If you're like me—someone who loves great UI but struggled with CSS—I encour
 
 
 ]]></content:encoded>
-            <author>surajadsul@gmail.com (Suraj Adsul)</author>
+            <author>surajadsul02@gmail.com (Suraj Adsul)</author>
         </item>
         <item>
             <title><![CDATA[Creating Worklogs Using Cursor AI Editor]]></title>
-            <link>https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor</link>
-            <guid>https://surajadsul.com/blog/creating_worklogs_using_cursor_ai_editor</guid>
+            <link>https://surajadsul.me/blog/creating_worklogs_using_cursor_ai_editor</link>
+            <guid>https://surajadsul.me/blog/creating_worklogs_using_cursor_ai_editor</guid>
             <pubDate>Sun, 02 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Learn how to efficiently create and manage daily worklogs using the Cursor AI editor with a structured approach.]]></description>
             <content:encoded><![CDATA[
@@ -163,12 +163,12 @@ To ensure your worklogs remain useful and effective, follow these best practices
 By using the Cursor AI editor to maintain structured and detailed worklogs, you can enhance productivity and ensure better documentation of your daily work. Following the outlined structure, guidelines, and best practices will make worklogs more effective and easier to review in the future.
 
 ]]></content:encoded>
-            <author>surajadsul@gmail.com (Suraj Adsul)</author>
+            <author>surajadsul02@gmail.com (Suraj Adsul)</author>
         </item>
         <item>
             <title><![CDATA[Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable]]></title>
-            <link>https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</link>
-            <guid>https://surajadsul.com/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</guid>
+            <link>https://surajadsul.me/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</link>
+            <guid>https://surajadsul.me/blog/integrating_tailwind_css_in_a_legacy_project_using_the_standalone_executable</guid>
             <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A step-by-step guide on integrating Tailwind CSS into a legacy project using the standalone executable. Learn how to set up the project structure, configure styles, and streamline the build process without relying on npm.]]></description>
             <content:encoded><![CDATA[
@@ -291,12 +291,12 @@ Using the Tailwind CSS standalone executable is an efficient way to modernize a 
 The key to success is maintaining clear boundaries between legacy and modern CSS patterns, allowing a gradual transition to modern styling practices while keeping the codebase structured and manageable.
 
 ]]></content:encoded>
-            <author>surajadsul@gmail.com (Suraj Adsul)</author>
+            <author>surajadsul02@gmail.com (Suraj Adsul)</author>
         </item>
         <item>
             <title><![CDATA[Building AI Harvest Timesheet: My Journey with Cursor IDE]]></title>
-            <link>https://surajadsul.com/blog/my_journey_with_cursor_ide</link>
-            <guid>https://surajadsul.com/blog/my_journey_with_cursor_ide</guid>
+            <link>https://surajadsul.me/blog/my_journey_with_cursor_ide</link>
+            <guid>https://surajadsul.me/blog/my_journey_with_cursor_ide</guid>
             <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Exploring how Cursor IDE enhanced the development of AI Harvest Timesheet, an application that converts Git commits into Harvest time entries.]]></description>
             <content:encoded><![CDATA[
@@ -405,7 +405,7 @@ The combination of Cursor's intelligent features and my vision for automated tim
 For developers interested in trying out AI Harvest Timesheet or contributing to its development, you can find the project at [GitHub repository link](https://github.com/Tech9Apps/ai-harvest-timesheet).
 
 ]]></content:encoded>
-            <author>surajadsul@gmail.com (Suraj Adsul)</author>
+            <author>surajadsul02@gmail.com (Suraj Adsul)</author>
         </item>
     </channel>
 </rss>
