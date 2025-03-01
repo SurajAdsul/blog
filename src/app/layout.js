@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Suspense } from "react";
 import "./globals.css";
 
 const inter = Inter({
@@ -72,11 +73,13 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-WBDKH9D3Z0" />
       </head>
       <body
         className="antialiased min-h-screen bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300 font-sans"
       >
+        <Suspense fallback={null}>
+          <GoogleAnalytics GA_MEASUREMENT_ID="G-WBDKH9D3Z0" />
+        </Suspense>
         <Navbar />
         <div className="pt-32">
           <main className="flex-1">
