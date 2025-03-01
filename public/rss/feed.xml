@@ -4,7 +4,7 @@
         <title>Suraj Adsul's Blog</title>
         <link>https://surajadsul.me</link>
         <description>Articles about software development, technology, and personal experiences</description>
-        <lastBuildDate>Sat, 01 Mar 2025 05:23:18 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Mar 2025 06:01:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -172,8 +172,6 @@ By using the Cursor AI editor to maintain structured and detailed worklogs, you 
             <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A step-by-step guide on integrating Tailwind CSS into a legacy project using the standalone executable. Learn how to set up the project structure, configure styles, and streamline the build process without relying on npm.]]></description>
             <content:encoded><![CDATA[
-# Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable
-
 In a legacy project, integrating Tailwind CSS using the standalone executable instead of npm can be an effective approach. Here's how it can be implemented and why this method works well.
 
 ## Implementation Approach
@@ -287,6 +285,8 @@ An example of using Tailwind CSS:
 ## Conclusion
 
 Using the Tailwind CSS standalone executable is an efficient way to modernize a legacy project's CSS without introducing complex dependencies. This approach enables the advantages of utility-first CSS while maintaining simplicity and compatibility with existing styles.
+
+Official Documentation: [TailwindCSS standalone-cli](https://tailwindcss.com/blog/standalone-cli)
 
 The key to success is maintaining clear boundaries between legacy and modern CSS patterns, allowing a gradual transition to modern styling practices while keeping the codebase structured and manageable.
 

@@ -5,8 +5,6 @@ description: "A step-by-step guide on integrating Tailwind CSS into a legacy pro
 tags: ['Tailwind CSS', 'Frontend Development', 'Legacy Code']
 ---
 
-# Integrating Tailwind CSS in a Legacy Project Using the Standalone Executable
-
 In a legacy project, integrating Tailwind CSS using the standalone executable instead of npm can be an effective approach. Here's how it can be implemented and why this method works well.
 
 ## Implementation Approach
@@ -120,6 +118,8 @@ An example of using Tailwind CSS:
 ## Conclusion
 
 Using the Tailwind CSS standalone executable is an efficient way to modernize a legacy project's CSS without introducing complex dependencies. This approach enables the advantages of utility-first CSS while maintaining simplicity and compatibility with existing styles.
+
+Official Documentation: [TailwindCSS standalone-cli](https://tailwindcss.com/blog/standalone-cli)
 
 The key to success is maintaining clear boundaries between legacy and modern CSS patterns, allowing a gradual transition to modern styling practices while keeping the codebase structured and manageable.
 

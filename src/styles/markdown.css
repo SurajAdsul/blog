@@ -8,6 +8,18 @@
   height: auto;
 }
 
+.markdown-content a {
+  color: rgb(20 184 166); /* text-teal-500 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.markdown-content a:hover {
+  color: rgb(13 148 136); /* text-teal-600 */
+  text-decoration: underline;
+}
+
 .markdown-content pre {
   overflow-x: auto;
   padding: 0;
@@ -110,4 +122,13 @@
 
 :is(.dark .prose ul > li::marker) {
   color: rgb(113 113 122); /* dark:text-zinc-500 */
+}
+
+/* Dark mode link colors */
+:is(.dark .markdown-content a) {
+  color: rgb(45 212 191); /* dark:text-teal-400 */
+}
+
+:is(.dark .markdown-content a:hover) {
+  color: rgb(94 234 212); /* dark:text-teal-300 */
 } 
