@@ -63,8 +63,8 @@ export default function Navbar() {
       <nav className="pb-4 pt-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center mx-auto lg:max-w-5xl">
-            {/* Profile Photo and Mobile Menu Button */}
-            <div className="flex items-center gap-4">
+            {/* Profile Photo */}
+            <div className="flex items-center">
               <Link 
                 href="/"
                 className="block overflow-hidden rounded-full w-8 h-8 ring-1 ring-zinc-900/5 dark:ring-white/10"
@@ -77,26 +77,6 @@ export default function Navbar() {
                   className="object-cover"
                 />
               </Link>
-              <button
-                onClick={toggleMenu}
-                className="sm:hidden text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none"
-              >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {isMenuOpen ? (
-                    <path d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
             </div>
 
             {/* Centered Desktop Menu */}
@@ -158,8 +138,31 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Dark Mode Toggle */}
-            <div className="w-10 sm:w-20 flex justify-end">
+            {/* Dark Mode Toggle and Menu Button */}
+            <div className="flex items-center gap-4">
+              <div className="pointer-events-auto md:hidden">
+                <button
+                  onClick={toggleMenu}
+                  className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
+                  type="button"
+                  aria-expanded={isMenuOpen}
+                >
+                  {isMenuOpen ? 'Close' : 'Menu'}
+                  <svg 
+                    viewBox="0 0 8 6" 
+                    aria-hidden="true" 
+                    className={`ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400 transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}
+                  >
+                    <path 
+                      d="M1.75 1.75 4 4.25l2.25-2.5" 
+                      fill="none" 
+                      strokeWidth="1.5" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
               <button
                 onClick={toggleDarkMode}
                 className="cursor-pointer rounded-full p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none"
@@ -193,46 +196,71 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="sm:hidden mt-4">
             <div className="rounded-lg bg-white/90 px-3 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-900/90 dark:text-zinc-200 dark:ring-white/10 space-y-1">
-              <Link
-                href="/"
-                className="relative block px-3 py-2 text-sm transition-all delay-150"
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left"
               >
-                <span className={`relative z-10 ${pathname === '/' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
-                  Home
-                </span>
-              </Link>
-              <Link
-                href="/blog"
-                className="relative block px-3 py-2 text-sm transition-all delay-150"
+                <Link
+                  href="/"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150"
+                >
+                  <span className={`relative z-10 ${pathname === '/' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Home
+                  </span>
+                </Link>
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left"
               >
-                <span className={`relative z-10 ${pathname === '/blog' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
-                  Blog
-                </span>
-              </Link>
-              <Link
-                href="/snippets"
-                className="relative block px-3 py-2 text-sm transition-all delay-150"
+                <Link
+                  href="/blog"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150"
+                >
+                  <span className={`relative z-10 ${pathname === '/blog' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Blog
+                  </span>
+                </Link>
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left"
               >
-                <span className={`relative z-10 ${pathname === '/snippets' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
-                  Snippets
-                </span>
-              </Link>
-              <Link
-                href="/resources"
-                className="relative block px-3 py-2 text-sm transition-all delay-150"
+                <Link
+                  href="/snippets"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150"
+                >
+                  <span className={`relative z-10 ${pathname === '/snippets' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Snippets
+                  </span>
+                </Link>
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left"
               >
-                <span className={`relative z-10 ${pathname === '/resources' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
-                  Resources
-                </span>
-              </Link>
-              <Link
-                href="/projects"
-                className="relative block px-3 py-2 text-sm transition-all delay-150"
+                <Link
+                  href="/resources"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150"
+                >
+                  <span className={`relative z-10 ${pathname === '/resources' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Resources
+                  </span>
+                </Link>
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left"
               >
-                <span className={`relative z-10 ${pathname === '/projects' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
-                  Projects
-                </span>
-              </Link>
+                <Link
+                  href="/projects"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150"
+                >
+                  <span className={`relative z-10 ${pathname === '/projects' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Projects
+                  </span>
+                </Link>
+              </button>
             </div>
           </div>
         )}
