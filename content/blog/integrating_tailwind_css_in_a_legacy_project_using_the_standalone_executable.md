@@ -5,11 +5,29 @@ description: "A step-by-step guide on integrating Tailwind CSS into a legacy pro
 tags: ['Tailwind CSS', 'Frontend Development', 'Legacy Code']
 ---
 
-In a legacy project, integrating Tailwind CSS using the standalone executable instead of npm can be an effective approach. Here's how it can be implemented and why this method works well.
+Tailwind CSS is a powerful utility-first CSS framework that has gained immense popularity for its flexibility and ease of use. However, integrating it into a legacy project—especially one that already has existing CSS and doesn’t use node modules—can seem daunting. 
+
+## The Challenge
+Legacy projects often come with their own set of constraints. In this case, we’re dealing with:
+
+- Existing CSS files that already style the project.
+- No node modules, meaning no npm or Node.js environment.
+- The need to integrate Tailwind CSS without disrupting the current setup.
+
+Given these constraints, the standard installation method for Tailwind (via npm) isn’t an option. But don’t worry—there’s a solution that fits this scenario perfectly.
+
 
 ## Implementation Approach
 
-### 1. Project Structure
+### 1. Download the Standalone CLI
+Visit the [Tailwind CSS Releases page](https://github.com/tailwindlabs/tailwindcss/releases) and download the standalone CLI executable for your platform (e.g., macOS, Windows, Linux). Make sure to choose the latest version.
+
+Once downloaded, ensure the file has executable permissions.
+```
+chmod +x tailwindcss
+```
+
+### 2. Project Structure
 
 A structured approach to organizing Tailwind integration:
 
@@ -23,7 +41,7 @@ project-root/
 └── Makefile
 ```
 
-### 2. Configuration Files
+### 3. Configuration Files
 
 A `tailwind-input.css` file can be created as the main configuration:
 
@@ -50,7 +68,7 @@ A `tailwind-input.css` file can be created as the main configuration:
 }
 ```
 
-### 3. Build Process
+### 4. Build Process
 
 A simple Makefile can be used to manage Tailwind CSS compilation:
 
@@ -70,7 +88,7 @@ Commands:
 
 ### 4. Integration with HTML
 
-The compiled CSS file is included in templates:
+The compiled CSS file can be included in templates:
 
 ```html
 <link rel="stylesheet" type="text/css" href="/css/tailwind.css?version=1.0.5" />
@@ -114,6 +132,11 @@ An example of using Tailwind CSS:
 2. **Scoped Implementation**: Use Tailwind CSS in designated directories.
 3. **Custom Utilities**: Create reusable utility classes as needed.
 4. **Build Process**: Use a Makefile for consistent builds across environments.
+
+## Potential Pitfalls
+Watch out for these common issues:
+
+- Specificity Issues: Tailwind’s utility classes have low specificity. If your existing CSS uses high-specificity selectors (e.g., IDs or nested rules), they might override Tailwind styles. Including `tailwind.css` after other CSS files helps mitigate this.
 
 ## Conclusion
 
