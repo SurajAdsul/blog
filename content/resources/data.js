@@ -48,6 +48,12 @@ export const resources = {
   ],
   Learning: [
     {
+      link: "https://www.youtube.com/@AndrejKarpathy",
+      title: "Andrej Karpathy - All about AI",
+      description: "A youtube channel that will teach you all about LLM's",
+      hostname: "youtube.com",
+    },
+    {
       link: "https://udemy.com",
       title: "Udemy",
       description: "Online learning marketplace",
