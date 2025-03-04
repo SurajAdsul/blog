@@ -14,18 +14,18 @@ export const projects = [
     status: "Coming Soon",
   },
   {
+    title: "MCP Server Salesforce",
+    description: "Salesforce integration for MCP Server",
+    link: "https://github.com/tsmztech/mcp-server-salesforce",
+    tech: ["Salesforce", "Salesforce CLI", "Salesforce DX"],
+    status: "Live",
+  },
+  {
     title: "AI Harvest Timesheet",
     description: "Convert Git commits into Harvest time entries.",
     link: "https://github.com/Tech9Apps/ai-harvest-timesheet",
     tech: ["ElectronJS", "React", "TypeScript", "Tailwind CSS"],
     status: "Live",
-  },
-  {
-    title: "Smart Assistant",
-    description:
-      "A simple AI assistant that can help you perform different tasks using local Ollama models",
-    link: "https://github.com/SurajAdsul/smart-assistant",
-    tech: ["javascript", "Ollama"],
   },
   {
     title: "Tradingview Indicators",
@@ -34,6 +34,13 @@ export const projects = [
     link: "https://www.tradingview.com/script/Y3DJP3Co-CandleTrend",
     tech: ["Python", "Tradingview Pine Script"],
     status: "Live",
+  },
+  {
+    title: "Smart Assistant",
+    description:
+      "A simple AI assistant that can help you perform different tasks using local Ollama models",
+    link: "https://github.com/SurajAdsul/smart-assistant",
+    tech: ["javascript", "Ollama"],
   },
   {
     title: "Ultralight",
