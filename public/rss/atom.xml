@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://surajadsul.me</id>
     <title>Suraj Adsul's Blog</title>
-    <updated>2025-03-01T12:20:18.909Z</updated>
+    <updated>2025-03-04T12:25:35.733Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Suraj Adsul</name>
@@ -180,11 +180,29 @@ By using the Cursor AI editor to maintain structured and detailed worklogs, you 
         <updated>2025-03-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A step-by-step guide on integrating Tailwind CSS into a legacy project using the standalone executable. Learn how to set up the project structure, configure styles, and streamline the build process without relying on npm.]]></summary>
         <content type="html"><![CDATA[
-In a legacy project, integrating Tailwind CSS using the standalone executable instead of npm can be an effective approach. Here's how it can be implemented and why this method works well.
+Tailwind CSS is a powerful utility-first CSS framework that has gained immense popularity for its flexibility and ease of use. However, integrating it into a legacy project—especially one that already has existing CSS and doesn’t use node modules—can seem daunting. 
+
+## The Challenge
+Legacy projects often come with their own set of constraints. In this case, we’re dealing with:
+
+- Existing CSS files that already style the project.
+- No node modules, meaning no npm or Node.js environment.
+- The need to integrate Tailwind CSS without disrupting the current setup.
+
+Given these constraints, the standard installation method for Tailwind (via npm) isn’t an option. But don’t worry—there’s a solution that fits this scenario perfectly.
+
 
 ## Implementation Approach
 
-### 1. Project Structure
+### 1. Download the Standalone CLI
+Visit the [Tailwind CSS Releases page](https://github.com/tailwindlabs/tailwindcss/releases) and download the standalone CLI executable for your platform (e.g., macOS, Windows, Linux). Make sure to choose the latest version.
+
+Once downloaded, ensure the file has executable permissions.
+```
+chmod +x tailwindcss
+```
+
+### 2. Project Structure
 
 A structured approach to organizing Tailwind integration:
 
@@ -198,7 +216,7 @@ project-root/
 └── Makefile
 ```
 
-### 2. Configuration Files
+### 3. Configuration Files
 
 A `tailwind-input.css` file can be created as the main configuration:
 
@@ -225,7 +243,7 @@ A `tailwind-input.css` file can be created as the main configuration:
 }
 ```
 
-### 3. Build Process
+### 4. Build Process
 
 A simple Makefile can be used to manage Tailwind CSS compilation:
 
@@ -245,7 +263,7 @@ Commands:
 
 ### 4. Integration with HTML
 
-The compiled CSS file is included in templates:
+The compiled CSS file can be included in templates:
 
 ```html
 <link rel="stylesheet" type="text/css" href="/css/tailwind.css?version=1.0.5" />
@@ -290,6 +308,11 @@ An example of using Tailwind CSS:
 3. **Custom Utilities**: Create reusable utility classes as needed.
 4. **Build Process**: Use a Makefile for consistent builds across environments.
 
+## Potential Pitfalls
+Watch out for these common issues:
+
+- Specificity Issues: Tailwind’s utility classes have low specificity. If your existing CSS uses high-specificity selectors (e.g., IDs or nested rules), they might override Tailwind styles. Including `tailwind.css` after other CSS files helps mitigate this.
+
 ## Conclusion
 
 Using the Tailwind CSS standalone executable is an efficient way to modernize a legacy project's CSS without introducing complex dependencies. This approach enables the advantages of utility-first CSS while maintaining simplicity and compatibility with existing styles.
@@ -327,6 +350,8 @@ The idea was born from a common pain point many developers face: maintaining acc
 
 Cursor proved to be an invaluable tool throughout the development process. Its AI-powered features and intuitive interface significantly enhanced my development workflow. Here's how Cursor helped at various stages:
 
+&nbsp;
+
 ### 1. Project Setup and Structure
 
 Cursor's intelligent code suggestions helped me set up the project structure efficiently. The application is built with Electron, and Cursor's understanding of the framework made it easier to:
@@ -337,6 +362,8 @@ Cursor's intelligent code suggestions helped me set up the project structure eff
 ### 2. Feature Implementation
 
 Some of the key features where Cursor's AI capabilities shined include:
+
+&nbsp;
 
 #### Smart Git Integration
 Cursor helped me implement complex Git operations with its context-aware code completion and documentation integration. The IDE's suggestions were particularly helpful when working with:
@@ -355,6 +382,8 @@ The modern Material UI implementation was streamlined thanks to Cursor's:
 - Component suggestions
 - CSS assistance
 - Layout optimization hints
+
+&nbsp;
 
 ### 3. Error Handling and Testing
 
@@ -383,21 +412,6 @@ Implementing webhook support for custom message formatting was made easier with 
 - JSON parsing implementations
 - Error handling patterns
 
-## Project Structure and Organization
-
-The final project structure reflects a well-organized application:
-```
-ai-harvest-timesheet/
-├── src/
-│   ├── components/    # UI components
-│   ├── services/      # Core services
-│   ├── utils/         # Helper functions
-│   └── config/        # Configuration
-├── docs/             # Documentation
-├── tests/            # Test suites
-└── build/            # Build outputs
-```
-
 ## Lessons Learned
 
 Throughout this project, I learned several valuable lessons:
@@ -412,9 +426,145 @@ Throughout this project, I learned several valuable lessons:
 
 Building AI Harvest Timesheet with Cursor was an enlightening experience that showcased the power of AI-assisted development. The final product is a robust, user-friendly application that solves a real problem for developers.
 
-The combination of Cursor's intelligent features and my vision for automated time tracking resulted in an application that I'm proud of and that others find valuable. The project is open-source and available on GitHub, where it continues to evolve with community contributions.
+The combination of Cursor's intelligent features and my vision for automated time tracking resulted in an application that I'm proud of and that others find valuable. 
 
 For developers interested in trying out AI Harvest Timesheet or contributing to its development, you can find the project at [GitHub repository link](https://github.com/Tech9Apps/ai-harvest-timesheet).
+
+]]></content>
+        <author>
+            <name>Suraj Adsul</name>
+            <email>surajadsul02@gmail.com</email>
+            <uri>https://surajadsul.me</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using Salesforce MCP Server: Natural Language Interface for Salesforce]]></title>
+        <id>https://surajadsul.me/blog/using_salesforce_mcp_server</id>
+        <link href="https://surajadsul.me/blog/using_salesforce_mcp_server"/>
+        <updated>2025-03-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Salesforce MCP Server is an MCP (Model Context Protocol) server implementation that allows you to query, modify, and manage your Salesforce objects and records using everyday language rather than complex SOQL queries or API calls]]></summary>
+        <content type="html"><![CDATA[
+
+
+In today's fast-paced development environment, efficiently managing and interacting with Salesforce data is crucial. I'm excited to introduce **Salesforce MCP Server**, a powerful tool that bridges the gap between natural language processing and Salesforce development. This package enables developers to interact with Salesforce using natural language through Claude AI integration.
+
+https://github.com/tsmztech/mcp-server-salesforce
+## Getting Started
+Install the package and check out the [GitHub repository](https://github.com/surajadsul/mcp-server-salesforce) for detailed documentation and examples.
+
+This is originally developer by [tsmztech](https://github.com/tsmztech). I have just added support for Oauth and support for Cursor IDE with refined documentation.
+
+## What is Salesforce MCP Server?
+
+Salesforce MCP Server is an MCP (Model Context Protocol) server implementation that revolutionizes how developers interact with Salesforce. It allows you to query, modify, and manage your Salesforce objects and records using everyday language rather than complex SOQL queries or API calls.
+
+## Key Features
+
+### 1. Smart Object Management
+- Create and modify custom objects using natural language
+- Intuitive field management and relationship creation
+- Automatic handling of complex metadata operations
+
+### 2. Intelligent Search Capabilities
+- Find objects using partial name matches
+- Search across multiple objects simultaneously
+- SOSL integration for comprehensive search functionality
+
+### 3. Advanced Data Operations
+- Complex queries with relationship support
+- Flexible data manipulation (insert, update, delete, upsert)
+- Cross-object search capabilities
+
+### 4. Developer-Friendly Integration
+- Seamless integration with Cursor IDE and Claude Desktop
+- Multiple authentication methods support
+- Comprehensive error handling and feedback
+
+## Getting Started
+
+### Installation
+```bash
+npm install -g @surajadsul02/mcp-server-salesforce
+```
+
+### Authentication Options
+
+The package supports two authentication methods:
+
+1. **Username/Password Authentication**
+   - Traditional username/password with security token
+   - Perfect for development and testing environments
+
+2. **OAuth2 Authentication**
+   - Secure consumer key/secret authentication
+   - Ideal for production environments and enterprise applications
+
+&nbsp;&nbsp;
+
+### Cursor IDE Setup
+Configure the MCP server in Cursor IDE `.cursor/mcp.json`:
+Check MCP servers in Cursor settings whether it's acive or not.
+Then in Cursor composer ask it describe the `Account` object.
+
+Try restarting Cursor if it does not work initially.
+
+
+```json
+{
+  "mcpServers": {
+    "salesforce": {
+      "command": "env",
+      "args": [
+        "SALESFORCE_USERNAME=your.email@example.com",
+        "SALESFORCE_PASSWORD=YourPassword",
+        "SALESFORCE_TOKEN=YourToken",
+        "npx",
+        "-y",
+        "@surajadsul02/mcp-server-salesforce"
+      ]
+    }
+  }
+}
+```
+
+## Real-World Examples
+
+Let's look at some practical examples of how you can interact with Salesforce using natural language:
+
+&nbsp;
+### 1. Object Discovery
+`
+"Find all objects related to customer service"
+`
+
+This simple command will search through your org and find all objects related to customer service, including standard and custom objects.
+
+&nbsp;
+### 2. Schema Analysis
+`
+"What fields are available in the Account object?"
+`
+
+Get a comprehensive list of fields, their types, and relationships for any object.
+
+&nbsp;
+### 3. Complex Queries
+`
+"Show me high-priority Cases with their related Contacts created this month"
+`
+
+Execute complex SOQL queries without writing a single line of code.
+
+&nbsp;
+### 4. Data Manipulation
+`
+"Create a Customer Feedback object with Rating and Comments fields"
+`
+
+Perform metadata operations using simple English instructions.
+
+
+
 
 ]]></content>
         <author>
