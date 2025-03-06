@@ -21,6 +21,14 @@ export const projects = [
     status: "Live",
   },
   {
+    title: "JS Playground",
+    description:
+      "A simple JavaScript playground that allows you to write and run JavaScript code.",
+    link: "https://github.com/SurajAdsul/js-playground/releases/tag/v0.0.1",
+    tech: ["ElectronJS", "React", "TypeScript", "CSS"],
+    status: "Live",
+  },
+  {
     title: "AI Harvest Timesheet",
     description: "Convert Git commits into Harvest time entries.",
     link: "https://github.com/Tech9Apps/ai-harvest-timesheet",
