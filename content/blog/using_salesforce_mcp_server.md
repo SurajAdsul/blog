@@ -12,7 +12,7 @@ In today's fast-paced development environment, efficiently managing and interact
 ## Getting Started
 Install the package and check out the [GitHub repository](https://github.com/surajadsul/mcp-server-salesforce) for detailed documentation and examples.
 
-This is originally developer by [tsmztech](https://github.com/tsmztech). I have just added support for Oauth and support for Cursor IDE with refined documentation.
+This is originally developed by [tsmztech](https://github.com/tsmztech). I have just added support for Oauth and support for Cursor IDE with refined documentation.
 
 ## What is Salesforce MCP Server?
 
