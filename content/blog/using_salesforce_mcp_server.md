@@ -9,7 +9,6 @@ tags: ['cursor', 'ai', 'harvest', 'timesheet', 'git', 'development']
 
 In today's fast-paced development environment, efficiently managing and interacting with Salesforce data is crucial. I'm excited to introduce **Salesforce MCP Server**, a powerful tool that bridges the gap between natural language processing and Salesforce development. This package enables developers to interact with Salesforce using natural language through Claude AI integration.
 
-https://github.com/tsmztech/mcp-server-salesforce
 ## Getting Started
 Install the package and check out the [GitHub repository](https://github.com/surajadsul/mcp-server-salesforce) for detailed documentation and examples.
 
