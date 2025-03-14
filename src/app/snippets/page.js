@@ -17,6 +17,9 @@ const icons = {
   javascript: (
     <i className="devicon-javascript-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
   ),
+  git: (
+    <i className="devicon-git-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
 };
 
 export default function SnippetsPage() {
