@@ -3,6 +3,7 @@ import Link from 'next/link';
 import path from 'path';
 import ProfileHeader from "./components/ProfileHeader";
 import WorkSection from "./components/WorkSection";
+import CertificatesSection from "./components/CertificatesSection";
 
 export default function Home() {
   // Get all blog posts from the content/blog directory
@@ -76,6 +77,7 @@ export default function Home() {
                 {/* Work Section */}
                 <div>
                   <WorkSection />
+                  <CertificatesSection />
                 </div>
               </div>
             </div>
