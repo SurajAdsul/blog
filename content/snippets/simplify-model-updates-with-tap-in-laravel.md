@@ -1,7 +1,7 @@
 ---
 title: Simplify Model Updates with `tap()` in Laravel  
 description: Use `tap()` to modify and return a model instance in a single line.  
-date: March 1, 2024  
+date: '2025-03-01'
 icon: laravel  
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Git: Amend Commit Dates in Interactive Rebase"   
 description: Amend Commit Dates in Interactive Rebase.  
-date: March 14, 2024  
+date: '2025-03-14'
 icon: git  
 ---
 

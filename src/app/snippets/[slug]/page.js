@@ -1,10 +1,16 @@
-import Link from 'next/link';
-import path from 'path';
-import { getMarkdownContent, getAllMarkdownFiles, MarkdownContent } from '@/utils/markdown';
-import '@/styles/markdown.css';
+import Link from "next/link";
+import path from "path";
+import {
+  getMarkdownContent,
+  getAllMarkdownFiles,
+  MarkdownContent,
+} from "@/utils/markdown";
+import "@/styles/markdown.css";
 
 export async function generateStaticParams() {
-  const snippets = getAllMarkdownFiles(path.join(process.cwd(), 'content/snippets'));
+  const snippets = getAllMarkdownFiles(
+    path.join(process.cwd(), "content/snippets")
+  );
   return snippets.map((snippet) => ({
     slug: snippet.slug,
   }));
@@ -13,7 +19,11 @@ export async function generateStaticParams() {
 export default async function SnippetPost({ params }) {
   const resolvedParams = await params; // Await the params object
   const slug = resolvedParams.slug; // Now access slug safely
-  const snippetPath = path.join(process.cwd(), 'content/snippets', `${slug}.md`);
+  const snippetPath = path.join(
+    process.cwd(),
+    "content/snippets",
+    `${slug}.md`
+  );
   const { frontmatter, content } = getMarkdownContent(snippetPath);
 
   if (!frontmatter) {
@@ -57,7 +67,16 @@ export default async function SnippetPost({ params }) {
                       className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
                     >
                       <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                      <span className="ml-3">{frontmatter.date}</span>
+                      <span className="ml-3">
+                        {new Date(frontmatter.date).toLocaleDateString(
+                          "en-US",
+                          {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          }
+                        )}
+                      </span>
                     </time>
                   </header>
                   <div className="mt-8 prose dark:prose-invert markdown-content">
@@ -71,4 +90,4 @@ export default async function SnippetPost({ params }) {
       </div>
     </div>
   );
-} 
+}

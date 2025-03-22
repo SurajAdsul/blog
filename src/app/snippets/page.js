@@ -20,12 +20,16 @@ const icons = {
   git: (
     <i className="devicon-git-plain text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
   ),
+  github: (
+    <i className="devicon-github-original text-2xl text-teal-500 dark:text-teal-400 transition-transform group-hover:scale-110"></i>
+  ),
 };
 
 export default function SnippetsPage() {
   // Get all markdown files from the snippets directory
   const snippetsDirectory = path.join(process.cwd(), "content/snippets");
-  const snippets = getAllMarkdownFiles(snippetsDirectory);
+  const snippets = getAllMarkdownFiles(snippetsDirectory)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <div className="mt-16 sm:mt-18">

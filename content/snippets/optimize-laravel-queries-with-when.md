@@ -1,7 +1,7 @@
 ---
 title: Optimize Laravel Queries with `when()`
 description: Improve query readability using conditional logic.
-date: March 20, 2024
+date: '2025-03-20'
 icon: laravel
 ---
 
