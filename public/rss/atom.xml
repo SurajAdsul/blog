@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://surajadsul.me</id>
     <title>Suraj Adsul's Blog</title>
-    <updated>2025-03-22T14:50:28.940Z</updated>
+    <updated>2025-03-22T14:55:00.441Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Suraj Adsul</name>
@@ -465,7 +465,7 @@ By integrating this AI-powered PR review system into your development workflow w
 While this automated system is powerful, it works best as a complement to human review rather than a replacement. Use it to catch common issues and maintain consistency while allowing human reviewers to focus on higher-level architectural and design considerations.
 
 ## Next
-[Check how to fix Gihub PR review comments in Cursor](snippets/extract_pr_review_comments_for_fixing_issues_in_cursor)
+[Check how to fix Gihub PR review comments in Cursor](https://www.surajadsul.me/snippets/extract_pr_review_comments_for_fixing_issues_in_cursor)
 
 
 

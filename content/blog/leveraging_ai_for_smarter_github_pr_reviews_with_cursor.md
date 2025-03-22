@@ -135,7 +135,7 @@ By integrating this AI-powered PR review system into your development workflow w
 While this automated system is powerful, it works best as a complement to human review rather than a replacement. Use it to catch common issues and maintain consistency while allowing human reviewers to focus on higher-level architectural and design considerations.
 
 ## Next
-[Check how to fix Gihub PR review comments in Cursor](snippets/extract_pr_review_comments_for_fixing_issues_in_cursor)
+[Check how to fix Gihub PR review comments in Cursor](https://www.surajadsul.me/snippets/extract_pr_review_comments_for_fixing_issues_in_cursor)
 
 
 
