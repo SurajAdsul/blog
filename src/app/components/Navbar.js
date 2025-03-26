@@ -115,6 +115,17 @@ export default function Navbar() {
                 )}
               </Link>
               <Link 
+                href="/prompts" 
+                className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150 cursor-pointer"
+              >
+                <span className={`relative z-10 ${pathname === '/prompts' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                  Prompts
+                </span>
+                {pathname === '/prompts' && (
+                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+                )}
+              </Link>
+              <Link 
                 href="/resources" 
                 className="relative rounded-lg px-3 inline-block py-2 text-sm transition-all delay-150 cursor-pointer"
               >
@@ -232,6 +243,19 @@ export default function Navbar() {
                 >
                   <span className={`relative z-10 ${pathname === '/snippets' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
                     Snippets
+                  </span>
+                </Link>
+              </button>
+              <button
+                onClick={toggleMenu}
+                className="w-full text-left cursor-pointer"
+              >
+                <Link
+                  href="/prompts"
+                  className="relative block px-3 py-2 text-sm transition-all delay-150 cursor-pointer"
+                >
+                  <span className={`relative z-10 ${pathname === '/prompts' ? 'text-teal-500 dark:text-teal-400' : 'text-gray-600 dark:text-gray-50'}`}>
+                    Prompts
                   </span>
                 </Link>
               </button>

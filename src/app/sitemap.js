@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 
 import { getAllMarkdownFiles } from '@/utils/markdown';
+import { getAllPrompts } from '@/utils/prompts';
 import path from 'path';
 
 export default async function sitemap() {
@@ -24,6 +25,24 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
+  // Get all prompts
+  const prompts = getAllPrompts();
+  const promptUrls = prompts.map((prompt) => ({
+    url: `${baseUrl}/prompts/${prompt.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+
+  // Get unique prompt categories
+  const categories = [...new Set(prompts.map(prompt => prompt.category))];
+  const categoryUrls = categories.map((category) => ({
+    url: `${baseUrl}/prompts/categories/${category}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }));
+
   // Add static pages
   const staticPages = [
     {
@@ -45,6 +64,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/prompts`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/resources`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'monthly',
@@ -52,5 +77,5 @@ export default async function sitemap() {
     },
   ];
 
-  return [...staticPages, ...blogUrls, ...snippetUrls];
+  return [...staticPages, ...blogUrls, ...snippetUrls, ...promptUrls, ...categoryUrls];
 } 
