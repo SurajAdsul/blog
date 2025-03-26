@@ -24,7 +24,11 @@ export function getAllPrompts() {
       frontmatter.split('\n').forEach(line => {
         const [key, ...valueParts] = line.split(':');
         if (key && valueParts.length) {
-          metadata[key.trim()] = valueParts.join(':').trim().replace(/^"(.*)"$/, '$1');
+          // Convert order to number if it's the order field
+          const value = key.trim() === 'order' 
+            ? parseInt(valueParts.join(':').trim(), 10)
+            : valueParts.join(':').trim().replace(/^"(.*)"$/, '$1');
+          metadata[key.trim()] = value;
         }
       });
 
@@ -34,13 +38,16 @@ export function getAllPrompts() {
         ...metadata
       };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort((a, b) => (a.order || Infinity) - (b.order || Infinity)); // Sort by order, unordered items last
 
   return allPrompts;
 }
 
 export function getPromptsByCategory(category) {
-  return getAllPrompts().filter(prompt => prompt.category === category);
+  return getAllPrompts()
+    .filter(prompt => prompt.category === category)
+    .sort((a, b) => (a.order || Infinity) - (b.order || Infinity));
 }
 
 export function getPromptBySlug(slug) {

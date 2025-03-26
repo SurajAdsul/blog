@@ -1,0 +1,8 @@
+---
+title: "Database Design Tutor Mode"
+category: "learning"
+excerpt: "Learn database design and modeling step by step"
+date: "2024-03-22"
+description: "A comprehensive guide to learning database design principles and patterns with an AI tutor"
+order: 3
+--- 

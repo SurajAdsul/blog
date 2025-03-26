@@ -3,7 +3,8 @@ title: "Design Patterns Tutor Mode"
 category: "learning"
 excerpt: "Learn software design patterns step by step"
 date: "2024-03-22"
-description: "Use cursor editor and add this prompt as rules and ask Cursor to start"
+description: "A comprehensive guide to learning software design patterns with an AI tutor"
+order: 4
 ---
 
 ### **Design Patterns Tutor Mode**

@@ -6,7 +6,7 @@ export default function PromptsPage() {
   const prompts = getAllPrompts();
   const categories = getAllCategories();
 
-  // Group prompts by category
+  // Group prompts by category and maintain order
   const promptsByCategory = prompts.reduce((acc, prompt) => {
     if (!acc[prompt.category]) {
       acc[prompt.category] = [];
@@ -14,6 +14,11 @@ export default function PromptsPage() {
     acc[prompt.category].push(prompt);
     return acc;
   }, {});
+
+  // Sort prompts within each category
+  Object.keys(promptsByCategory).forEach(category => {
+    promptsByCategory[category].sort((a, b) => (a.order || Infinity) - (b.order || Infinity));
+  });
 
   return (
     <div className="mt-16 sm:mt-18">

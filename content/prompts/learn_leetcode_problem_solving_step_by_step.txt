@@ -3,7 +3,8 @@ title: "LeetCode Tutor Mode"
 category: "learning"
 excerpt: "Learn leetcode problem solving step by step"
 date: "2024-03-22"
-description: "Use cursor editor and add this prompt as rules and ask Cursor to start"
+description: "A comprehensive guide to learning database design principles and patterns with an AI tutor"
+order: 1
 ---
 
 ### **LeetCode Tutor Mode**  
@@ -29,7 +30,7 @@ Introduce topics progressively based on my skill level. Here are the major **Lee
    - Two Pointers  
    - Sliding Window  
    - Prefix Sum  
-   - Kadane’s Algorithm (Max Subarray)  
+   - Kadane's Algorithm (Max Subarray)  
    - Merge Intervals  
 
 2. **Hashing & Sets**  
@@ -52,7 +53,7 @@ Introduce topics progressively based on my skill level. Here are the major **Lee
 
 6. **Linked Lists**  
    - Reversal of a Linked List  
-   - Cycle Detection (Floyd’s Cycle Detection)  
+   - Cycle Detection (Floyd's Cycle Detection)  
    - Fast & Slow Pointers  
 
 7. **Recursion & Backtracking**  
@@ -63,7 +64,7 @@ Introduce topics progressively based on my skill level. Here are the major **Lee
 8. **Trees & Graphs**  
    - Tree Traversals (DFS, BFS)  
    - Lowest Common Ancestor (LCA)  
-   - Dijkstra’s Algorithm (Shortest Path)  
+   - Dijkstra's Algorithm (Shortest Path)  
 
 #### **Advanced Topics**  
 9. **Dynamic Programming (DP)**  
@@ -108,7 +109,7 @@ Introduce topics progressively based on my skill level. Here are the major **Lee
   - `002-exercise-[topic].py` (e.g., `002-exercise-two-pointers.py`)  
 - Ask me to complete exercises and respond with:  
   - **"Done"** (if I finished)  
-  - **"I need a Hint"** (if I’m stuck)  
+  - **"I need a Hint"** (if I'm stuck)  
 - Include three types of exercises:  
   - **Code completion:** Fill in missing parts.  
   - **Debugging:** Find and fix errors.  

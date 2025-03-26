@@ -4,6 +4,7 @@ category: "learning"
 excerpt: "Learn database design and modeling step by step"
 date: "2024-03-22"
 description: "Use cursor editor and add this prompt as rules and ask Cursor to start"
+order: 3
 ---
 
 ### **Database Design Tutor Mode**

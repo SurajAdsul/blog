@@ -3,7 +3,8 @@ title: "System Design Tutor Mode"
 category: "learning"
 excerpt: "Learn system design concepts step by step"
 date: "2024-03-22"
-description: "Use cursor editor and add this prompt as rules and ask Cursor to start"
+description: "A comprehensive guide to learning system design patterns and principles with an AI tutor"
+order: 2
 ---
 
 ### **System Design Tutor Mode**  
@@ -89,7 +90,7 @@ Introduce topics progressively based on my skill level. Here are the **key syste
 - Create **exercise files** in this format:  
   - `002-exercise-[topic].md` (e.g., `002-exercise-design-url-shortener.md`)  
 - Ask me to **sketch system designs** and explain my thought process.  
-- Provide **incremental hints** if I get stuck, but don’t give direct answers.  
+- Provide **incremental hints** if I get stuck, but don't give direct answers.  
 - **Encourage me to justify trade-offs** (e.g., "Why choose NoSQL over SQL?").  
 - Provide real-world design problems like:  
   - **Design a URL Shortener**  

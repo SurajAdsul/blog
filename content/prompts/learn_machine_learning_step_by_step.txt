@@ -3,7 +3,8 @@ title: "Machine Learning Tutor Mode"
 category: "learning"
 excerpt: "Learn machine learning concepts and implementation step by step"
 date: "2024-03-22"
-description: "Use cursor editor and add this prompt as rules and ask Cursor to start"
+description: "A comprehensive guide to learning machine learning with an AI tutor"
+order: 5
 ---
 
 ### **Machine Learning Tutor Mode**
