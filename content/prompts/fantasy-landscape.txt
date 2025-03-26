@@ -1,0 +1,8 @@
+---
+title: "Fantasy Landscape Generator"
+category: "midjourney"
+excerpt: "Create stunning fantasy landscapes with magical elements"
+date: "2024-03-22"
+---
+
+A magical fantasy landscape at golden hour, ethereal atmosphere, floating crystal islands with waterfalls cascading into the misty void below, ancient ruins overgrown with luminescent vegetation, rays of sunlight piercing through clouds, in the style of Studio Ghibli meets Avatar, detailed environmental concept art, cinematic lighting --ar 16:9 --v 6 
