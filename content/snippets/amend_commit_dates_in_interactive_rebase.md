@@ -15,7 +15,7 @@ git rebase --continue
 
 One liner:
 ```bash
-git rebase -i HEAD~8 && GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit && git rebase --continue
+git rebase -i HEAD~14 --exec 'git commit --amend --no-edit --date="$(date)"'
 ```
 
 #### Explanation:
