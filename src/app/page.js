@@ -4,6 +4,7 @@ import path from 'path';
 import ProfileHeader from "./components/ProfileHeader";
 import WorkSection from "./components/WorkSection";
 import CertificatesSection from "./components/CertificatesSection";
+import EbooksSection from "./components/EbooksSection";
 
 export default function Home() {
   // Get all blog posts from the content/blog directory
@@ -76,6 +77,7 @@ export default function Home() {
 
                 {/* Work Section */}
                 <div>
+                  <EbooksSection />
                   <WorkSection />
                   <CertificatesSection />
                 </div>
