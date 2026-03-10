@@ -10,7 +10,7 @@ export default function Home() {
   // Get all blog posts from the content/blog directory
   const blogPosts = getAllMarkdownFiles(path.join(process.cwd(), 'content/blog'))
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3); // Get only the 3 most recent posts
+    .slice(0, 4); // Get only the 4 most recent posts
 
   return (
     <div className="sm:px-8 mt-16 sm:mt-18">
