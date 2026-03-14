@@ -1,6 +1,7 @@
 'use client';
 
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import dynamic from 'next/dynamic';
 
 const CodeBlock = dynamic(() => import('./CodeBlock'), {
@@ -11,6 +12,7 @@ const ClientMarkdownContent = ({ content }) => {
   return (
     <div className="markdown-content">
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
         components={{
           code({ inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
