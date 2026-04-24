@@ -21,10 +21,18 @@ export const projects = [
     status: "Live",
   },
   {
+    title: "Friday Skills",
+    description:
+      "A collection of AI coding agent skills. Includes inline-review — review git diffs in the browser with per-line annotations that flow back to your agent as structured prompts.",
+    link: "https://github.com/SurajAdsul/friday-skills",
+    tech: ["JavaScript", "Node.js", "HTML", "CSS", "Prism.js"],
+    status: "Live",
+  },
+  {
     title: "Meeting Recorder",
     description:
-      "macOS CLI that captures system audio and microphone audio separately into per-session directories and transcribes them locally with whisper.cpp.",
-    tech: ["Swift", "ScreenCaptureKit", "whisper.cpp"],
+      "macOS app that captures every meeting and turns them into structured notes.",
+    tech: ["macOS", "AI"],
     status: "Live",
     private: true,
   },
@@ -131,6 +139,9 @@ export const techStack = {
     "TypeScript",
     "Python",
     "SQL",
+    "Swift",
+    "Shell",
+    "Pine Script",
   ],
   "Database/Management": [
     "MySQL",
@@ -142,6 +153,7 @@ export const techStack = {
   ],
   Frameworks: [
     "Laravel",
+    "Symfony",
     "Tailwind CSS",
     "Gin Web Framework",
     "Serverless framework",
@@ -154,6 +166,8 @@ export const techStack = {
     "jQuery",
     "WordPress",
     "Shopify",
+    "Playwright",
+    "Puppeteer",
   ],
   "Deployment Platforms": [
     "AWS",
@@ -164,6 +178,7 @@ export const techStack = {
     "Render",
     "Cloudflare",
     "Huggingface",
+    "GitHub Pages",
   ],
   AI: [
     "OpenAI",
@@ -173,6 +188,14 @@ export const techStack = {
     "Finetuning Models",
     "Embedding",
   ],
-  Tools: ["Git", "AWS", "Docker", "CI/CD"],
+  Tools: [
+    "Git",
+    "AWS",
+    "Docker",
+    "CI/CD",
+    "Salesforce CLI",
+    "Salesforce DX",
+    "uv",
+  ],
   "Payment Integrations": ["Stripe", "Lemon Squeezy", "PayPal"],
 };
