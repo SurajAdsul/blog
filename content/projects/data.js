@@ -21,6 +21,54 @@ export const projects = [
     status: "Live",
   },
   {
+    title: "Meeting Recorder",
+    description:
+      "macOS CLI that captures system audio and microphone audio separately into per-session directories and transcribes them locally with whisper.cpp.",
+    tech: ["Swift", "ScreenCaptureKit", "whisper.cpp"],
+    status: "Live",
+    private: true,
+  },
+  {
+    title: "Invisible",
+    description:
+      "A transparent, always-on-top coding assistant that floats over your screen, captures the active window, runs OCR, and generates AI-powered solutions.",
+    tech: ["ElectronJS", "React", "TypeScript", "OpenAI"],
+    status: "Live",
+    private: true,
+  },
+  {
+    title: "LinkedIn Commenter",
+    description:
+      "Automates commenting on LinkedIn posts and scrapes post URLs from hashtag feeds or keyword searches, powered by Playwright and OpenAI.",
+    tech: ["Python", "Playwright", "OpenAI", "uv"],
+    status: "Live",
+    private: true,
+  },
+  {
+    title: "LinkedIn Diagrams",
+    description:
+      "A curated collection of drawio and SVG diagrams used to illustrate concepts in LinkedIn posts.",
+    tech: ["drawio", "SVG"],
+    status: "Live",
+    private: true,
+  },
+  {
+    title: "PDF Maker",
+    description:
+      "Converts Markdown (with frontmatter) into polished, report-style PDFs using Puppeteer and custom HTML templates. Used to produce ebook-style outputs.",
+    tech: ["Node.js", "Puppeteer", "Marked", "HTML", "CSS"],
+    status: "Live",
+    private: true,
+  },
+  {
+    title: "Presentations",
+    description:
+      "Password-protected slide decks hosted via GitHub Pages.",
+    tech: ["HTML", "GitHub Pages", "Shell"],
+    status: "Live",
+    private: true,
+  },
+  {
     title: "JS Playground",
     description:
       "A simple desktop application that allows you to write and run JavaScript code.",

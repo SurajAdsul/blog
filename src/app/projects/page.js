@@ -15,7 +15,9 @@ export default function ProjectsPage() {
                 are the ones that I&apos;m most proud of. Many of them are
                 open-source, so if you see something that piques your interest,
                 check out the code and contribute if you have ideas for how it
-                can be improved.
+                can be improved. This page is personal and open-source work
+                only &mdash; professional projects from my day job aren&apos;t
+                listed here.
               </p>
             </header>
 
@@ -77,9 +79,15 @@ export default function ProjectsPage() {
                           <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                             {project.title}
                           </h2>
+                          <div className="ml-2 flex flex-wrap items-center gap-1.5">
+                          {project.private && (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-zinc-200 text-zinc-700 dark:bg-zinc-700/50 dark:text-zinc-300">
+                              Private
+                            </span>
+                          )}
                           {project.status && (
                             <span
-                              className={`ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                                 project.status === 'Live'
                                   ? 'bg-green-100 text-green-800 dark:bg-green-800/30 dark:text-green-400'
                                   : 'bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-400'
@@ -88,6 +96,7 @@ export default function ProjectsPage() {
                               {project.status}
                             </span>
                           )}
+                          </div>
                         </div>
                         <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                           {project.description}
@@ -129,9 +138,15 @@ export default function ProjectsPage() {
                           <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                             {project.title}
                           </h2>
+                          <div className="ml-2 flex flex-wrap items-center gap-1.5">
+                          {project.private && (
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-zinc-200 text-zinc-700 dark:bg-zinc-700/50 dark:text-zinc-300">
+                              Private
+                            </span>
+                          )}
                           {project.status && (
                             <span
-                              className={`ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                                 project.status === 'Live' || project.status === 'Coming Soon'
                                   ? 'bg-green-100 text-green-800 dark:bg-green-800/30 dark:text-green-400'
                                   : 'bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-400'
@@ -140,6 +155,7 @@ export default function ProjectsPage() {
                               {project.status}
                             </span>
                           )}
+                          </div>
                         </div>
                         <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                           {project.description}
