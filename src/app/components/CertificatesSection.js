@@ -1,6 +1,22 @@
 export default function CertificatesSection() {
   const certificates = [
     {
+      name: "Building with the Claude API",
+      issuer: "Anthropic",
+      date: "2026",
+      link: "https://verify.skilljar.com/c/8xdco244gaxa",
+      logo: "/certificates/anthropic_logo.png",
+      logoBg: "bg-white dark:bg-white",
+    },
+    {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      date: "2026",
+      link: "https://verify.skilljar.com/c/yetknhz9ucad",
+      logo: "/certificates/anthropic_logo.png",
+      logoBg: "bg-white dark:bg-white",
+    },
+    {
       name: "Master RAG: Retrieval-Augmented Generation Systems",
       issuer: "Udemy",
       date: "2025",
@@ -65,9 +81,15 @@ export default function CertificatesSection() {
             className="stroke-zinc-400 dark:stroke-zinc-500"
           />
         </svg>
-        <span className="ml-3">Certificates</span>
+        <span className="ml-3">
+          Certificates{" "}
+          <span className="ml-1 text-xs font-normal text-zinc-400 dark:text-zinc-500">
+            ({certificates.length})
+          </span>
+        </span>
       </h2>
-      <div className="mt-6 max-h-[180px] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+      <div className="relative">
+        <div className="mt-6 max-h-[220px] overflow-y-auto pr-2 space-y-4 scrollbar-thin scrollbar-thumb-zinc-200 dark:scrollbar-thumb-zinc-700 scrollbar-track-transparent">
         {certificates.map((cert, index) => (
           <li key={index} className="list-none">
             <a
@@ -76,7 +98,7 @@ export default function CertificatesSection() {
               rel="noopener noreferrer"
               className="flex gap-4 group"
             >
-              <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className={`relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0 ${cert.logoBg || "dark:bg-zinc-800"}`}>
                 {cert.logo ? (
                   <img src={cert.logo} alt="" className="h-7 w-7" />
                 ) : (
@@ -100,6 +122,8 @@ export default function CertificatesSection() {
             </a>
           </li>
         ))}
+        </div>
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent dark:from-zinc-900" />
       </div>
     </div>
   );
