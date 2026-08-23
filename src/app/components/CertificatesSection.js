@@ -1,6 +1,14 @@
 export default function CertificatesSection() {
   const certificates = [
     {
+      name: "Claude Certified Architect - Professional",
+      issuer: "Anthropic",
+      date: "2026",
+      link: "https://www.credly.com/badges/4c8afb2f-3903-4bb6-93eb-6208744076a8/public_url",
+      logo: "/certificates/anthropic_logo.png",
+      logoBg: "bg-white dark:bg-white",
+    },
+    {
       name: "Building with the Claude API",
       issuer: "Anthropic",
       date: "2026",
