@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "CuePilot",
+    description:
+      "Free macOS menu bar app. Select text in any app, press ⇧⌘A, and get it rewritten in place by the AI provider you pick. Fixes grammar, improves writing, summarizes, and drafts Slack and email replies in the conversation's language.",
+    link: "https://cuepilot.pages.dev",
+    tech: [
+      "ElectronJS",
+      "React",
+      "TypeScript",
+      "Effect",
+      "Vercel AI SDK",
+      "Swift",
+      "Supabase",
+    ],
+    status: "Live",
+  },
+  {
     title: "Macro Intel",
     description:
       "Gives macro outlook of the global economy and stock market. Provides custom indicators that will help you make better investment decisions.",
